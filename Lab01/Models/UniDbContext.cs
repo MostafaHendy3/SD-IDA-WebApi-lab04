@@ -1,0 +1,11 @@
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace Lab01.Models
+{
+    public class UniDbContext : DbContext
+    {
+        public UniDbContext(DbContextOptions<UniDbContext> options):base(options) { }
+        
+        public virtual DbSet<Student> Students { get; set; }
+    }
+}

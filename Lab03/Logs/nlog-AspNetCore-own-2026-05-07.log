@@ -1,0 +1,369 @@
+2026-05-07 00:16:30.1573|0|DEBUG|Lab03.Program|init main |url: |action: 
+2026-05-07 00:16:31.3725|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5279 |url: |action: 
+2026-05-07 00:16:31.4988|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2026-05-07 00:16:31.4988|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2026-05-07 00:16:31.4988|0|INFO|Microsoft.Hosting.Lifetime|Content root path: E:\ITI\WebApi\lec01\Lab03 |url: |action: 
+2026-05-07 00:16:45.5364|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger |url: http://localhost/swagger|action: 
+2026-05-07 00:16:45.5636|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-07 00:16:45.7312|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 00:16:45.7312|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 00:16:45.7312|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-07 00:16:45.7312|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-07 00:16:45.7312|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-07 00:16:46.0265|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-07 00:16:46.0436|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/favicon-32x32.png |url: http://localhost/swagger/favicon-32x32.png|action: 
+2026-05-07 00:16:50.0898|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /api/Student/getAll |url: http://localhost/api/Student/getAll|action: GetAll
+2026-05-07 00:21:30.6797|0|DEBUG|Lab03.Program|init main |url: |action: 
+2026-05-07 00:21:31.3769|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5279 |url: |action: 
+2026-05-07 00:21:31.6959|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2026-05-07 00:21:31.6959|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2026-05-07 00:21:31.6959|0|INFO|Microsoft.Hosting.Lifetime|Content root path: E:\ITI\WebApi\lec01\Lab03 |url: |action: 
+2026-05-07 00:21:31.9841|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-07 00:21:32.1302|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 00:21:32.1546|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 00:21:32.1546|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-07 00:21:32.1546|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-07 00:21:32.1546|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-07 00:21:32.4956|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-07 00:21:54.4977|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 00:21:54.4977|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 00:21:54.5351|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /.well-known/appspecific/com.chrome.devtools.json |url: http://localhost/.well-known/appspecific/com.chrome.devtools.json|action: 
+2026-05-07 00:23:11.5914|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /api/Student/getById/ |url: http://localhost/api/Student/getById/|action: 
+2026-05-07 00:23:34.4557|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /api/Student/getById/1 |url: http://localhost/api/Student/getById/1|action: GetById
+2026-05-07 00:39:05.8151|0|DEBUG|Lab03.Program|init main |url: |action: 
+2026-05-07 00:39:06.3403|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5279 |url: |action: 
+2026-05-07 00:39:06.3871|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2026-05-07 00:39:06.3871|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2026-05-07 00:39:06.3871|0|INFO|Microsoft.Hosting.Lifetime|Content root path: E:\ITI\WebApi\lec01\Lab03 |url: |action: 
+2026-05-07 00:39:07.0845|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-07 00:39:07.1593|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 00:39:07.1593|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-07 00:39:07.1669|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 00:39:07.1669|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-07 00:39:07.2017|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-07 00:39:07.4562|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-07 00:40:34.4357|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET //api/Student/TestDTO/ |url: http://localhost//api/Student/TestDTO/|action: 
+2026-05-07 00:40:54.2456|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET //api/Student/TestDTO/ |url: http://localhost//api/Student/TestDTO/|action: 
+2026-05-07 00:40:57.8239|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /api/Student/TestDTO/ |url: http://localhost/api/Student/TestDTO/|action: 
+2026-05-07 00:41:05.6791|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /api/Student/TestDTO/ |url: http://localhost/api/Student/TestDTO/|action: 
+2026-05-07 00:41:14.3049|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /api/Student/TestDTO/ |url: http://localhost/api/Student/TestDTO/|action: 
+2026-05-07 00:41:20.8185|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /api/Student/TestDTO/ |url: http://localhost/api/Student/TestDTO/|action: 
+2026-05-07 00:41:29.8594|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: POST /api/Student/TestDTO/ |url: http://localhost/api/Student/TestDTO/|action: TestDTO
+2026-05-07 00:41:30.0934|0|INFO|Lab03.Filters.ResultFilter|OnResultExecuting: Header: server-time: 5/7/2026 12:41:30 AM |url: http://localhost/api/Student/TestDTO/|action: TestDTO
+2026-05-07 00:42:10.6333|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: POST /api/Student/TestDTO/ |url: http://localhost/api/Student/TestDTO/|action: TestDTO
+2026-05-07 00:42:10.6516|0|INFO|Lab03.Filters.ResultFilter|OnResultExecuting: Header: server-time: 5/7/2026 12:42:10 AM |url: http://localhost/api/Student/TestDTO/|action: TestDTO
+2026-05-07 00:44:22.9898|0|DEBUG|Lab03.Program|init main |url: |action: 
+2026-05-07 00:44:23.3106|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5279 |url: |action: 
+2026-05-07 00:44:23.3617|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2026-05-07 00:44:23.3617|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2026-05-07 00:44:23.3617|0|INFO|Microsoft.Hosting.Lifetime|Content root path: E:\ITI\WebApi\lec01\Lab03 |url: |action: 
+2026-05-07 00:44:24.1312|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-07 00:44:24.2493|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 00:44:24.2493|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-07 00:44:24.2493|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 00:44:24.2493|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-07 00:44:24.2493|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-07 00:44:24.4342|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-07 00:44:33.9200|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: POST /api/Student/TestDTO/ |url: http://localhost/api/Student/TestDTO/|action: TestDTO
+2026-05-07 00:44:34.1068|0|INFO|Lab03.Filters.ResultFilter|OnResultExecuting: Header: server-time: 5/7/2026 12:44:34 AM |url: http://localhost/api/Student/TestDTO/|action: TestDTO
+2026-05-07 00:44:44.4511|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: POST /api/Student/TestDTO/ |url: http://localhost/api/Student/TestDTO/|action: TestDTO
+2026-05-07 00:44:44.4746|0|INFO|Lab03.Filters.ResultFilter|OnResultExecuting: Header: server-time: 5/7/2026 12:44:44 AM |url: http://localhost/api/Student/TestDTO/|action: TestDTO
+2026-05-07 00:44:50.7587|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: POST /api/Student/TestDTO/ |url: http://localhost/api/Student/TestDTO/|action: TestDTO
+2026-05-07 00:44:50.7721|0|INFO|Lab03.Filters.ResultFilter|OnResultExecuting: Header: server-time: 5/7/2026 12:44:50 AM |url: http://localhost/api/Student/TestDTO/|action: TestDTO
+2026-05-07 00:44:58.8707|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: 
+2026-05-07 00:47:44.4576|0|DEBUG|Lab03.Program|init main |url: |action: 
+2026-05-07 00:47:44.7972|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5279 |url: |action: 
+2026-05-07 00:47:44.8407|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2026-05-07 00:47:44.8550|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2026-05-07 00:47:44.8550|0|INFO|Microsoft.Hosting.Lifetime|Content root path: E:\ITI\WebApi\lec01\Lab03 |url: |action: 
+2026-05-07 00:47:45.1396|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-07 00:47:45.2512|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 00:47:45.2512|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 00:47:45.2512|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-07 00:47:45.2512|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-07 00:47:45.2512|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-07 00:47:45.4422|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-07 00:47:48.5003|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: POST /api/Student/TestDTO/ |url: http://localhost/api/Student/TestDTO/|action: TestDTO
+2026-05-07 00:47:48.7052|0|INFO|Lab03.Filters.ResultFilter|OnResultExecuting: Header: server-time: 5/7/2026 12:47:48 AM |url: http://localhost/api/Student/TestDTO/|action: TestDTO
+2026-05-07 00:48:41.5431|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: POST /api/Student/TestDTO/1 |url: http://localhost/api/Student/TestDTO/1|action: 
+2026-05-07 00:49:04.5655|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: POST /api/Student/TestDTO/1 |url: http://localhost/api/Student/TestDTO/1|action: 
+2026-05-07 00:49:24.0181|0|DEBUG|Lab03.Program|init main |url: |action: 
+2026-05-07 00:49:24.3768|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5279 |url: |action: 
+2026-05-07 00:49:24.4302|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2026-05-07 00:49:24.4302|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2026-05-07 00:49:24.4302|0|INFO|Microsoft.Hosting.Lifetime|Content root path: E:\ITI\WebApi\lec01\Lab03 |url: |action: 
+2026-05-07 00:49:25.1588|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-07 00:49:25.2664|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 00:49:25.2664|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 00:49:25.2664|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-07 00:49:25.2664|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-07 00:49:25.2664|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-07 00:49:25.4463|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-07 00:49:28.6233|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: POST /api/Student/TestDTO/1 |url: http://localhost/api/Student/TestDTO/1|action: TestDTO
+2026-05-07 00:49:28.7959|0|INFO|Lab03.Filters.ResultFilter|OnResultExecuting: Header: server-time: 5/7/2026 12:49:28 AM |url: http://localhost/api/Student/TestDTO/1|action: TestDTO
+2026-05-07 00:49:36.1837|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: POST /api/Student/TestDTO/1 |url: http://localhost/api/Student/TestDTO/1|action: TestDTO
+2026-05-07 00:49:36.2143|0|INFO|Lab03.Filters.ResultFilter|OnResultExecuting: Header: server-time: 5/7/2026 12:49:36 AM |url: http://localhost/api/Student/TestDTO/1|action: TestDTO
+2026-05-07 00:49:45.2656|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: POST /api/Student/TestDTO/ |url: http://localhost/api/Student/TestDTO/|action: 
+2026-05-07 00:50:09.9528|0|DEBUG|Lab03.Program|init main |url: |action: 
+2026-05-07 00:50:10.2656|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5279 |url: |action: 
+2026-05-07 00:50:10.3191|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2026-05-07 00:50:10.3191|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2026-05-07 00:50:10.3191|0|INFO|Microsoft.Hosting.Lifetime|Content root path: E:\ITI\WebApi\lec01\Lab03 |url: |action: 
+2026-05-07 00:50:10.6877|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-07 00:50:10.7974|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-07 00:50:10.7974|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 00:50:10.7974|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 00:50:10.7974|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-07 00:50:10.7974|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-07 00:50:10.9867|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-07 00:50:11.0181|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: POST /api/Student/TestDTO/1 |url: http://localhost/api/Student/TestDTO/1|action: TestDTO
+2026-05-07 00:50:11.1993|0|INFO|Lab03.Filters.ResultFilter|OnResultExecuting: Header: server-time: 5/7/2026 12:50:11 AM |url: http://localhost/api/Student/TestDTO/1|action: TestDTO
+2026-05-07 00:50:37.1838|0|DEBUG|Lab03.Program|init main |url: |action: 
+2026-05-07 00:50:37.5044|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5279 |url: |action: 
+2026-05-07 00:50:37.5563|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2026-05-07 00:50:37.5563|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2026-05-07 00:50:37.5563|0|INFO|Microsoft.Hosting.Lifetime|Content root path: E:\ITI\WebApi\lec01\Lab03 |url: |action: 
+2026-05-07 00:50:38.3348|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-07 00:50:38.4480|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-07 00:50:38.4480|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-07 00:50:38.4480|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 00:50:38.4480|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 00:50:38.4480|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-07 00:50:38.6120|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-07 00:50:40.4821|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: POST /api/Student/TestDTO/1 |url: http://localhost/api/Student/TestDTO/1|action: TestDTO
+2026-05-07 00:50:40.7024|0|INFO|Lab03.Filters.ResultFilter|OnResultExecuting: Header: server-time: 5/7/2026 12:50:40 AM |url: http://localhost/api/Student/TestDTO/1|action: TestDTO
+2026-05-07 02:31:47.8251|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-07 02:31:47.8565|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 02:31:47.8565|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 02:31:47.8565|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-07 02:31:47.9128|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-07 02:31:47.9176|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-07 02:31:48.0851|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-07 02:31:48.0909|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/favicon-32x32.png |url: http://localhost/swagger/favicon-32x32.png|action: 
+2026-05-07 02:49:34.1406|0|DEBUG|Lab03.Program|init main |url: |action: 
+2026-05-07 02:51:22.6802|0|DEBUG|Lab03.Program|init main |url: |action: 
+2026-05-07 03:01:23.0915|0|DEBUG|Lab03.Program|init main |url: |action: 
+2026-05-07 03:01:23.4965|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5279 |url: |action: 
+2026-05-07 03:01:23.7765|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2026-05-07 03:01:23.7765|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2026-05-07 03:01:23.7765|0|INFO|Microsoft.Hosting.Lifetime|Content root path: E:\ITI\WebApi\lec01\Lab03 |url: |action: 
+2026-05-07 03:01:24.5831|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-07 03:01:24.7292|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 03:01:24.7292|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-07 03:01:24.7292|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-07 03:01:24.7292|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 03:01:24.7292|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-07 03:01:24.9973|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-07 03:01:54.2554|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /api/Department/getAll |url: http://localhost/api/Department/getAll|action: GetAll
+2026-05-07 03:01:56.2514|0|INFO|Lab03.Filters.ResultFilter|OnResultExecuting: Header: server-time: 5/7/2026 3:01:56 AM |url: http://localhost/api/Department/getAll|action: GetAll
+2026-05-07 03:04:19.3398|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /api/Department/getAll |url: http://localhost/api/Department/getAll|action: GetAll
+2026-05-07 03:04:19.5409|0|INFO|Lab03.Filters.ResultFilter|OnResultExecuting: Header: server-time: 5/7/2026 3:04:19 AM |url: http://localhost/api/Department/getAll|action: GetAll
+2026-05-07 03:07:04.5311|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /api/Department/getAll |url: http://localhost/api/Department/getAll|action: GetAll
+2026-05-07 03:07:04.6374|0|INFO|Lab03.Filters.ResultFilter|OnResultExecuting: Header: server-time: 5/7/2026 3:07:04 AM |url: http://localhost/api/Department/getAll|action: GetAll
+2026-05-07 03:10:47.4992|0|DEBUG|Lab03.Program|init main |url: |action: 
+2026-05-07 03:10:47.8185|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5279 |url: |action: 
+2026-05-07 03:10:48.0382|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2026-05-07 03:10:48.0382|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2026-05-07 03:10:48.0382|0|INFO|Microsoft.Hosting.Lifetime|Content root path: E:\ITI\WebApi\lec01\Lab03 |url: |action: 
+2026-05-07 03:10:48.2611|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-07 03:10:48.3703|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 03:10:48.3703|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 03:10:48.3703|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-07 03:10:48.3703|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-07 03:10:48.3703|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-07 03:10:48.6547|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-07 03:10:58.8440|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /api/Department/getAll |url: http://localhost/api/Department/getAll|action: GetAll
+2026-05-07 03:11:00.6287|0|INFO|Lab03.Filters.ResultFilter|OnResultExecuting: Header: server-time: 5/7/2026 3:11:00 AM |url: http://localhost/api/Department/getAll|action: GetAll
+2026-05-07 03:12:42.2864|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-07 03:12:42.2983|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-07 03:12:42.2983|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-07 03:12:42.3666|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 03:12:42.3666|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 03:12:42.3698|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 03:12:42.3698|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-07 03:12:42.3698|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-07 03:12:42.3698|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 03:12:42.3698|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 03:12:42.3698|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 03:12:42.3698|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-07 03:12:42.4021|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-07 03:12:42.4021|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-07 03:12:42.4021|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-07 03:12:42.4021|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-07 03:12:42.4172|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-07 03:12:42.4172|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-07 03:12:42.5449|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-07 03:12:42.5573|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/favicon-32x32.png |url: http://localhost/swagger/favicon-32x32.png|action: 
+2026-05-07 03:12:42.5915|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-07 03:12:42.5915|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/favicon-32x32.png |url: http://localhost/swagger/favicon-32x32.png|action: 
+2026-05-07 03:12:42.7454|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-07 03:12:42.7505|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/favicon-32x32.png |url: http://localhost/swagger/favicon-32x32.png|action: 
+2026-05-07 03:12:50.2187|0|DEBUG|Lab03.Program|init main |url: |action: 
+2026-05-07 03:12:50.6607|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5279 |url: |action: 
+2026-05-07 03:12:50.8994|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2026-05-07 03:12:50.8994|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2026-05-07 03:12:50.8994|0|INFO|Microsoft.Hosting.Lifetime|Content root path: E:\ITI\WebApi\lec01\Lab03 |url: |action: 
+2026-05-07 03:12:51.5761|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-07 03:12:51.6828|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 03:12:51.6828|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-07 03:12:51.6828|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 03:12:51.6828|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-07 03:12:51.6828|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-07 03:12:51.8869|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-07 03:13:07.9258|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: POST /api/Department/getall |url: http://localhost/api/Department/getall|action: 
+2026-05-07 03:13:12.9643|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /api/Department/getall |url: http://localhost/api/Department/getall|action: GetAll
+2026-05-07 03:13:14.8592|0|INFO|Lab03.Filters.ResultFilter|OnResultExecuting: Header: server-time: 5/7/2026 3:13:14 AM |url: http://localhost/api/Department/getall|action: GetAll
+2026-05-07 03:13:23.1161|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /api/Department/getall |url: http://localhost/api/Department/getall|action: GetAll
+2026-05-07 03:13:23.2644|0|INFO|Lab03.Filters.ResultFilter|OnResultExecuting: Header: server-time: 5/7/2026 3:13:23 AM |url: http://localhost/api/Department/getall|action: GetAll
+2026-05-07 03:13:44.5127|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-07 03:13:44.5127|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-07 03:13:44.5127|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-07 03:13:44.5286|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-07 03:13:44.6284|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 03:13:44.6284|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 03:13:44.6284|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 03:13:44.6370|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 03:13:44.6370|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-07 03:13:44.6370|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-07 03:13:44.6370|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 03:13:44.6370|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 03:13:44.6370|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 03:13:44.6523|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 03:13:44.6523|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-07 03:13:44.6523|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-07 03:13:44.6719|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-07 03:13:44.6719|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-07 03:13:44.6719|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-07 03:13:44.6719|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-07 03:13:44.6833|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-07 03:13:44.6833|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-07 03:13:44.6833|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-07 03:13:44.6833|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-07 03:13:44.8168|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-07 03:13:44.8168|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/favicon-32x32.png |url: http://localhost/swagger/favicon-32x32.png|action: 
+2026-05-07 03:13:44.8301|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-07 03:13:44.8401|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/favicon-32x32.png |url: http://localhost/swagger/favicon-32x32.png|action: 
+2026-05-07 03:13:44.8401|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-07 03:13:44.8560|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/favicon-32x32.png |url: http://localhost/swagger/favicon-32x32.png|action: 
+2026-05-07 03:13:44.8560|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-07 03:13:44.8560|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/favicon-32x32.png |url: http://localhost/swagger/favicon-32x32.png|action: 
+2026-05-07 03:13:54.7501|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-07 03:13:54.7501|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-07 03:13:54.7501|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-07 03:13:54.7501|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-07 03:13:54.8389|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 03:13:54.8425|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 03:13:54.8425|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-07 03:13:54.8425|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 03:13:54.8425|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 03:13:54.8425|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 03:13:54.8425|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 03:13:54.8425|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 03:13:54.8425|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 03:13:54.8425|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-07 03:13:54.8425|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-07 03:13:54.8573|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-07 03:13:54.8724|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-07 03:13:54.8724|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-07 03:13:54.8724|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-07 03:13:54.8724|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-07 03:13:54.8724|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-07 03:13:54.8724|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-07 03:13:54.8860|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-07 03:13:54.8860|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-07 03:13:54.9963|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-07 03:13:55.0012|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/favicon-32x32.png |url: http://localhost/swagger/favicon-32x32.png|action: 
+2026-05-07 03:13:55.0111|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-07 03:13:55.0111|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-07 03:13:55.0111|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/favicon-32x32.png |url: http://localhost/swagger/favicon-32x32.png|action: 
+2026-05-07 03:13:55.0111|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/favicon-32x32.png |url: http://localhost/swagger/favicon-32x32.png|action: 
+2026-05-07 03:13:55.0274|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-07 03:13:55.0274|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/favicon-32x32.png |url: http://localhost/swagger/favicon-32x32.png|action: 
+2026-05-07 03:14:01.1138|0|DEBUG|Lab03.Program|init main |url: |action: 
+2026-05-07 03:14:01.4333|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5279 |url: |action: 
+2026-05-07 03:14:01.6770|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2026-05-07 03:14:01.6770|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2026-05-07 03:14:01.6770|0|INFO|Microsoft.Hosting.Lifetime|Content root path: E:\ITI\WebApi\lec01\Lab03 |url: |action: 
+2026-05-07 03:14:01.8104|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-07 03:14:01.9131|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-07 03:14:01.9131|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 03:14:01.9131|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 03:14:01.9131|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-07 03:14:01.9131|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-07 03:14:02.2003|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-07 03:14:06.0017|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /api/Department/getall |url: http://localhost/api/Department/getall|action: GetAll
+2026-05-07 03:14:07.8295|0|INFO|Lab03.Filters.ResultFilter|OnResultExecuting: Header: server-time: 5/7/2026 3:14:07 AM |url: http://localhost/api/Department/getall|action: GetAll
+2026-05-07 03:15:31.6199|0|DEBUG|Lab03.Program|init main |url: |action: 
+2026-05-07 03:15:32.0081|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5279 |url: |action: 
+2026-05-07 03:15:32.2365|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2026-05-07 03:15:32.2365|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2026-05-07 03:15:32.2365|0|INFO|Microsoft.Hosting.Lifetime|Content root path: E:\ITI\WebApi\lec01\Lab03 |url: |action: 
+2026-05-07 03:15:32.6872|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-07 03:15:32.7994|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 03:15:32.7994|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 03:15:32.7994|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-07 03:15:32.7994|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-07 03:15:32.7994|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-07 03:15:32.9819|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /api/Department/getall |url: http://localhost/api/Department/getall|action: GetAll
+2026-05-07 03:15:33.1227|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-07 03:15:34.9331|0|INFO|Lab03.Filters.ResultFilter|OnResultExecuting: Header: server-time: 5/7/2026 3:15:34 AM |url: http://localhost/api/Department/getall|action: GetAll
+2026-05-07 03:18:03.9205|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-07 03:18:03.9331|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-07 03:18:03.9331|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-07 03:18:03.9331|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-07 03:18:03.9331|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-07 03:18:03.9483|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-07 03:18:04.0577|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 03:18:04.0712|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 03:18:04.0712|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-07 03:18:04.0836|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 03:18:04.0912|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 03:18:04.0912|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 03:18:04.0912|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 03:18:04.0912|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-07 03:18:04.0912|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 03:18:04.0912|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 03:18:04.0912|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 03:18:04.1065|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 03:18:04.1065|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-07 03:18:04.1065|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 03:18:04.1065|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-07 03:18:04.1065|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 03:18:04.1065|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-07 03:18:04.1065|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-07 03:18:04.1065|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-07 03:18:04.1238|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-07 03:18:04.1366|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-07 03:18:04.1366|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-07 03:18:04.1366|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-07 03:18:04.1366|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-07 03:18:04.1519|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-07 03:18:04.1519|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-07 03:18:04.1519|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-07 03:18:04.1519|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-07 03:18:04.1519|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-07 03:18:04.1519|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-07 03:18:04.3551|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-07 03:18:04.3551|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/favicon-32x32.png |url: http://localhost/swagger/favicon-32x32.png|action: 
+2026-05-07 03:18:04.3551|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/favicon-32x32.png |url: http://localhost/swagger/favicon-32x32.png|action: 
+2026-05-07 03:18:04.3708|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-07 03:18:04.3708|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-07 03:18:04.3708|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/favicon-32x32.png |url: http://localhost/swagger/favicon-32x32.png|action: 
+2026-05-07 03:18:04.3708|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/favicon-32x32.png |url: http://localhost/swagger/favicon-32x32.png|action: 
+2026-05-07 03:18:04.3883|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/favicon-32x32.png |url: http://localhost/swagger/favicon-32x32.png|action: 
+2026-05-07 03:18:04.3883|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-07 03:18:04.3883|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-07 03:18:04.5208|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-07 03:18:04.5208|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/favicon-32x32.png |url: http://localhost/swagger/favicon-32x32.png|action: 
+2026-05-07 03:21:39.3930|0|DEBUG|Lab03.Program|init main |url: |action: 
+2026-05-07 03:21:39.7340|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5279 |url: |action: 
+2026-05-07 03:21:39.7816|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2026-05-07 03:21:39.7816|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2026-05-07 03:21:39.7816|0|INFO|Microsoft.Hosting.Lifetime|Content root path: E:\ITI\WebApi\lec01\Lab03 |url: |action: 
+2026-05-07 03:21:40.0818|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-07 03:21:40.1827|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-07 03:21:40.1827|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-07 03:21:40.1827|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-07 03:21:40.1827|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-07 03:21:40.1827|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-07 03:21:40.3545|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
