@@ -27,18 +27,21 @@ namespace Lab03
             );
 
             // Generic repository registration
-            builder.Services.AddScoped(typeof(Repositories.IRepository<>), typeof(Repositories.GenericRepository<>));
+            builder.Services.AddScoped(
+                typeof(Repositories.IRepository<>),
+                typeof(Repositories.GenericRepository<>)
+            );
 
-            builder.Services.AddCors(
-                op =>                 {
-                    op.AddPolicy("AllowAll", builder =>
+            builder.Services.AddCors(op =>
+            {
+                op.AddPolicy(
+                    "AllowAll",
+                    builder =>
                     {
-                        builder.AllowAnyOrigin()
-                               .AllowAnyMethod()
-                               .AllowAnyHeader();
-                    });
-                }
+                        builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+                    }
                 );
+            });
 
             // NLog: Register as Logging Provider
             var logger = NLog
