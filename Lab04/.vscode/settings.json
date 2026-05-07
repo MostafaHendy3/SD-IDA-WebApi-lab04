@@ -1,0 +1,10 @@
+{
+  "terminal.integrated.profiles.windows": {
+    "GitBash": {
+      "path": "C:\\Program Files\\Git\\git-bash.exe",
+      "args": ["--login", "-i"]
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "GitBash",
+  "liveServer.settings.multiRootWorkspaceName": "Lab04"
+}

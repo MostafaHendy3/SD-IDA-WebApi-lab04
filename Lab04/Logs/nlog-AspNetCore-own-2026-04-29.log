@@ -1,0 +1,198 @@
+2026-04-29 17:58:08.2007|0|DEBUG|Lab04.Program|init main |url: |action: 
+2026-04-29 17:58:08.8364|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5279 |url: |action: 
+2026-04-29 17:58:08.9067|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2026-04-29 17:58:08.9067|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2026-04-29 17:58:08.9067|0|INFO|Microsoft.Hosting.Lifetime|Content root path: E:\ITI\WebApi\lec01\Lab04 |url: |action: 
+2026-04-29 18:06:38.9149|0|DEBUG|Lab04.Program|init main |url: |action: 
+2026-04-29 18:06:40.0299|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5279 |url: |action: 
+2026-04-29 18:06:40.1460|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2026-04-29 18:06:40.1460|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2026-04-29 18:06:40.1460|0|INFO|Microsoft.Hosting.Lifetime|Content root path: E:\ITI\WebApi\lec01\Lab04 |url: |action: 
+2026-04-29 18:17:46.6001|0|DEBUG|Lab04.Program|init main |url: |action: 
+2026-04-29 18:18:04.3967|0|DEBUG|Lab04.Program|init main |url: |action: 
+2026-04-29 18:27:37.1644|0|DEBUG|Lab04.Program|init main |url: |action: 
+2026-04-29 18:27:42.8816|0|DEBUG|Lab04.Program|init main |url: |action: 
+2026-04-29 18:27:55.1800|0|DEBUG|Lab04.Program|init main |url: |action: 
+2026-04-29 18:27:56.7378|20102|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (67ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+DECLARE @var nvarchar(max);
+SELECT @var = QUOTENAME([d].[name])
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Students]') AND [c].[name] = N'Name');
+IF @var IS NOT NULL EXEC(N'ALTER TABLE [Students] DROP CONSTRAINT ' + @var + ';');
+ALTER TABLE [Students] ALTER COLUMN [Name] nvarchar(12) NOT NULL; |url: |action: 
+2026-04-29 18:28:12.1794|0|DEBUG|Lab04.Program|init main |url: |action: 
+2026-04-29 18:28:16.8506|0|DEBUG|Lab04.Program|init main |url: |action: 
+2026-04-29 18:28:22.8962|0|DEBUG|Lab04.Program|init main |url: |action: 
+2026-04-29 18:42:04.3059|0|DEBUG|Lab04.Program|init main |url: |action: 
+2026-04-29 18:42:04.6919|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5279 |url: |action: 
+2026-04-29 18:42:04.7477|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2026-04-29 18:42:04.7477|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2026-04-29 18:42:04.7477|0|INFO|Microsoft.Hosting.Lifetime|Content root path: E:\ITI\WebApi\lec01\Lab04 |url: |action: 
+2026-04-29 18:42:05.3232|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-04-29 18:42:05.4421|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-04-29 18:42:05.4421|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-04-29 18:42:05.4421|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-04-29 18:42:05.4421|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-04-29 18:42:05.4421|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-04-29 18:42:05.6166|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-04-29 18:42:19.0759|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /api/Student/getAll |url: http://localhost/api/Student/getAll|action: GetAll
+2026-04-29 18:42:20.6458|0|INFO|Lab04.Filters.ResultFilter|OnResultExecuting: Header: server-time: 4/29/2026 6:42:20 PM |url: http://localhost/api/Student/getAll|action: GetAll
+2026-04-29 18:43:52.3948|0|DEBUG|Lab04.Program|init main |url: |action: 
+2026-04-29 18:43:52.7273|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5279 |url: |action: 
+2026-04-29 18:43:52.7806|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2026-04-29 18:43:52.7806|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2026-04-29 18:43:52.7806|0|INFO|Microsoft.Hosting.Lifetime|Content root path: E:\ITI\WebApi\lec01\Lab04 |url: |action: 
+2026-04-29 18:43:53.4153|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-04-29 18:43:53.5441|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-04-29 18:43:53.5441|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-04-29 18:43:53.5441|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-04-29 18:43:53.5441|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-04-29 18:43:53.5441|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-04-29 18:43:53.6933|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-04-29 18:44:01.5850|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /api/Student/getById/1 |url: http://localhost/api/Student/getById/1|action: GetById
+2026-04-29 18:44:03.1811|0|INFO|Lab04.Filters.ResultFilter|OnResultExecuting: Header: server-time: 4/29/2026 6:44:03 PM |url: http://localhost/api/Student/getById/1|action: GetById
+2026-04-29 18:45:05.5559|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: PUT /api/Student/update |url: http://localhost/api/Student/update|action: Put
+2026-04-29 18:45:05.6153|0|INFO|Lab04.Filters.ResultFilter|OnResultExecuting: Header: server-time: 4/29/2026 6:45:05 PM |url: http://localhost/api/Student/update|action: Put
+2026-04-29 18:45:08.1491|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: PUT /api/Student/update |url: http://localhost/api/Student/update|action: Put
+2026-04-29 18:45:08.1491|0|INFO|Lab04.Filters.ResultFilter|OnResultExecuting: Header: server-time: 4/29/2026 6:45:08 PM |url: http://localhost/api/Student/update|action: Put
+2026-04-29 18:46:01.4208|0|DEBUG|Lab04.Program|init main |url: |action: 
+2026-04-29 18:46:02.2581|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5279 |url: |action: 
+2026-04-29 18:46:02.3535|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2026-04-29 18:46:02.3535|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2026-04-29 18:46:02.3535|0|INFO|Microsoft.Hosting.Lifetime|Content root path: E:\ITI\WebApi\lec01\Lab04 |url: |action: 
+2026-04-29 18:46:03.2758|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-04-29 18:46:03.4133|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-04-29 18:46:03.4633|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-04-29 18:46:03.4633|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-04-29 18:46:03.4633|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-04-29 18:46:03.4633|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-04-29 18:46:03.6388|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-04-29 18:47:40.9505|0|DEBUG|Lab04.Program|init main |url: |action: 
+2026-04-29 18:47:41.6111|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5279 |url: |action: 
+2026-04-29 18:47:41.9091|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2026-04-29 18:47:41.9106|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2026-04-29 18:47:41.9106|0|INFO|Microsoft.Hosting.Lifetime|Content root path: E:\ITI\WebApi\lec01\Lab04 |url: |action: 
+2026-04-29 18:47:42.1473|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-04-29 18:47:42.2901|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-04-29 18:47:42.2901|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-04-29 18:47:42.2901|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-04-29 18:47:42.2901|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-04-29 18:47:42.3610|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-04-29 18:47:42.5203|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-04-29 18:47:50.3210|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /api/Student/TestException |url: http://localhost/api/Student/TestException|action: TestException
+2026-04-29 18:48:35.0342|0|ERROR|Lab04.Filters.ExceptionFilter|An error occurred while processing the request. System.Exception: bbb
+   at Lab04.Controllers.StudentController.TestException() in E:\ITI\WebApi\lec01\Lab04\Controllers\StudentController.cs:line 31
+   at lambda_method6(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)|url: http://localhost/api/Student/TestException|action: TestException
+2026-04-29 18:53:32.2429|0|DEBUG|Lab04.Program|init main |url: |action: 
+2026-04-29 18:53:32.9096|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5279 |url: |action: 
+2026-04-29 18:53:33.1805|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2026-04-29 18:53:33.1805|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2026-04-29 18:53:33.1805|0|INFO|Microsoft.Hosting.Lifetime|Content root path: E:\ITI\WebApi\lec01\Lab04 |url: |action: 
+2026-04-29 18:53:33.7585|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-04-29 18:53:33.9145|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-04-29 18:53:33.9145|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-04-29 18:53:33.9145|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-04-29 18:53:33.9145|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-04-29 18:53:33.9460|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-04-29 18:53:34.1010|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-04-29 18:53:43.8355|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /api/Student/getAll |url: http://localhost/api/Student/getAll|action: GetAll
+2026-04-29 18:53:45.6500|0|INFO|Lab04.Filters.ResultFilter|OnResultExecuting: Header: server-time: 4/29/2026 6:53:45 PM |url: http://localhost/api/Student/getAll|action: GetAll
+2026-04-29 18:54:15.2657|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: POST /api/Student/add |url: http://localhost/api/Student/add|action: Add
+2026-04-29 18:54:15.5825|0|INFO|Lab04.Filters.ResultFilter|OnResultExecuting: Header: server-time: 4/29/2026 6:54:15 PM |url: http://localhost/api/Student/add|action: Add
+2026-04-29 18:54:22.9638|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: POST /api/Student/add |url: http://localhost/api/Student/add|action: Add
+2026-04-29 18:54:23.0977|0|INFO|Lab04.Filters.ResultFilter|OnResultExecuting: Header: server-time: 4/29/2026 6:54:23 PM |url: http://localhost/api/Student/add|action: Add
+2026-04-29 18:54:32.6867|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: POST /api/Student/add |url: http://localhost/api/Student/add|action: Add
+2026-04-29 18:54:32.9048|0|INFO|Lab04.Filters.ResultFilter|OnResultExecuting: Header: server-time: 4/29/2026 6:54:32 PM |url: http://localhost/api/Student/add|action: Add
+2026-04-29 19:03:39.7342|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /api/Student/getAll |url: http://localhost/api/Student/getAll|action: GetAll
+2026-04-29 19:03:39.7538|0|INFO|Lab04.Filters.ResultFilter|OnResultExecuting: Header: server-time: 4/29/2026 7:03:39 PM |url: http://localhost/api/Student/getAll|action: GetAll
+2026-04-29 19:04:05.8395|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: POST /api/Student/add |url: http://localhost/api/Student/add|action: Add
+2026-04-29 19:04:05.8475|0|INFO|Lab04.Filters.ResultFilter|OnResultExecuting: Header: server-time: 4/29/2026 7:04:05 PM |url: http://localhost/api/Student/add|action: Add
+2026-04-29 19:04:14.2698|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: POST /api/Student/add |url: http://localhost/api/Student/add|action: Add
+2026-04-29 19:04:14.2698|0|INFO|Lab04.Filters.ResultFilter|OnResultExecuting: Header: server-time: 4/29/2026 7:04:14 PM |url: http://localhost/api/Student/add|action: Add
+2026-04-29 19:04:21.4519|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: POST /api/Student/add |url: http://localhost/api/Student/add|action: Add
+2026-04-29 19:04:21.4747|0|INFO|Lab04.Filters.ResultFilter|OnResultExecuting: Header: server-time: 4/29/2026 7:04:21 PM |url: http://localhost/api/Student/add|action: Add
+2026-04-29 19:04:35.7305|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: POST /api/Student/add |url: http://localhost/api/Student/add|action: Add
+2026-04-29 19:04:35.7305|0|INFO|Lab04.Filters.ResultFilter|OnResultExecuting: Header: server-time: 4/29/2026 7:04:35 PM |url: http://localhost/api/Student/add|action: Add
+2026-04-29 19:06:08.7207|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /api/Student/TestException |url: http://localhost/api/Student/TestException|action: TestException
+2026-04-29 19:06:20.7772|0|ERROR|Lab04.Filters.ExceptionFilter|An error occurred while processing the request. System.Exception: bbb
+   at Lab04.Controllers.StudentController.TestException() in E:\ITI\WebApi\lec01\Lab04\Controllers\StudentController.cs:line 31
+   at lambda_method111(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)|url: http://localhost/api/Student/TestException|action: TestException
+2026-04-29 19:10:12.9410|0|DEBUG|Lab04.Program|init main |url: |action: 
+2026-04-29 19:10:13.2698|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5279 |url: |action: 
+2026-04-29 19:10:13.3441|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2026-04-29 19:10:13.3441|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2026-04-29 19:10:13.3441|0|INFO|Microsoft.Hosting.Lifetime|Content root path: E:\ITI\WebApi\lec01\Lab04 |url: |action: 
+2026-04-29 19:10:13.6378|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-04-29 19:10:13.7584|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-04-29 19:10:13.7584|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-04-29 19:10:13.7584|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-04-29 19:10:13.7584|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-04-29 19:10:13.7584|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-04-29 19:10:13.9410|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-04-29 19:10:16.6558|0|DEBUG|Lab04.Program|init main |url: |action: 
+2026-04-29 19:10:17.3701|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5279 |url: |action: 
+2026-04-29 19:10:17.6889|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2026-04-29 19:10:17.6926|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2026-04-29 19:10:17.6926|0|INFO|Microsoft.Hosting.Lifetime|Content root path: E:\ITI\WebApi\lec01\Lab04 |url: |action: 
+2026-04-29 19:10:17.9118|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-04-29 19:10:18.0308|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-04-29 19:10:18.0308|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-04-29 19:10:18.0308|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-04-29 19:10:18.0776|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-04-29 19:10:18.0776|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-04-29 19:10:18.2709|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-04-29 19:10:26.5089|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /api/Student/TestException |url: http://localhost/api/Student/TestException|action: TestException
+2026-04-29 19:10:56.6931|0|DEBUG|Lab04.Program|init main |url: |action: 
+2026-04-29 19:10:57.4177|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5279 |url: |action: 
+2026-04-29 19:10:57.4920|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2026-04-29 19:10:57.4920|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2026-04-29 19:10:57.4920|0|INFO|Microsoft.Hosting.Lifetime|Content root path: E:\ITI\WebApi\lec01\Lab04 |url: |action: 
+2026-04-29 19:10:58.2256|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-04-29 19:10:58.3623|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-04-29 19:10:58.3623|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-04-29 19:10:58.3623|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-04-29 19:10:58.3623|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-04-29 19:10:58.3623|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-04-29 19:10:58.5926|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-04-29 19:11:06.1910|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /api/Student/TestException |url: http://localhost/api/Student/TestException|action: TestException
+2026-04-29 19:11:52.0068|0|DEBUG|Lab04.Program|init main |url: |action: 
+2026-04-29 19:11:53.0996|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5279 |url: |action: 
+2026-04-29 19:11:53.4764|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2026-04-29 19:11:53.4764|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2026-04-29 19:11:53.4764|0|INFO|Microsoft.Hosting.Lifetime|Content root path: E:\ITI\WebApi\lec01\Lab04 |url: |action: 
+2026-04-29 19:11:54.5389|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-04-29 19:11:54.7000|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-04-29 19:11:54.7000|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-04-29 19:11:54.7812|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-04-29 19:11:54.8096|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-04-29 19:11:54.8096|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-04-29 19:11:55.0017|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-04-29 19:12:00.2388|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /api/Student/TestException |url: http://localhost/api/Student/TestException|action: TestException
+2026-04-29 19:12:02.8561|0|ERROR|Lab04.Filters.ExceptionFilter|An error occurred while processing the request. System.Exception: bbb
+   at Lab04.Controllers.StudentController.TestException() in E:\ITI\WebApi\lec01\Lab04\Controllers\StudentController.cs:line 31
+   at lambda_method6(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)|url: http://localhost/api/Student/TestException|action: TestException
