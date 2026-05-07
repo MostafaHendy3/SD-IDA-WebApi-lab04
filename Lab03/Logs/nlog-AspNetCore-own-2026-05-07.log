@@ -6751,3 +6751,6 @@
 2026-05-07 04:28:26.7191|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/favicon-32x32.png |url: http://localhost/swagger/favicon-32x32.png|action: 
 2026-05-07 04:28:26.7191|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
 2026-05-07 04:28:26.7335|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /swagger/favicon-32x32.png |url: http://localhost/swagger/favicon-32x32.png|action: 
+2026-05-07 04:30:21.8806|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: OPTIONS /api/Department/getall |url: http://localhost/api/Department/getall|action: GetAll
+2026-05-07 04:30:21.8806|0|INFO|Lab03.Middleware.LoggingMiddleware|Handling request: GET /api/Department/getall |url: http://localhost/api/Department/getall|action: GetAll
+2026-05-07 04:30:21.9318|0|INFO|Lab03.Filters.ResultFilter|OnResultExecuting: Header: server-time: 5/7/2026 4:30:21 AM |url: http://localhost/api/Department/getall|action: GetAll
