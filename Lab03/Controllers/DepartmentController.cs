@@ -33,8 +33,8 @@ namespace Lab03.Controllers
 
                     StudentsNames = d.Students?.Select(s => s.Name).ToList() ?? new List<string>(),
                     CountStd = d.Students?.Count ?? 0,
-                    Msg = d.Students?.Count > 1 ? "Overloaded" : "Normal"
-            })
+                    Msg = d.Students?.Count > 1 ? "Overloaded" : "Normal",
+                })
                 .ToList();
 
             return Ok(dtos);
@@ -52,18 +52,25 @@ namespace Lab03.Controllers
 
         [HttpPost]
         [Route("add")]
-        public IActionResult Add(Department department  )
+        public IActionResult Add(DepartmentDto departmentdto)
         {
-            if (department == null)
+            if (departmentdto == null)
                 return BadRequest();
-            
-            _repo.Add(department);
-            return CreatedAtAction(nameof(GetById), new { id = department.Id }, department);
+            var dep = new Department
+            {
+                Name = departmentdto.DepName,
+                Location = departmentdto.DepLocation,
+                PhoneNumber = departmentdto.DepPhoneNumber,
+                Manager = departmentdto.DepManager,
+            };
+
+            _repo.Add(dep);
+            return CreatedAtAction(nameof(GetById), new { id = dep.Id }, dep);
         }
 
         [HttpPut]
         [Route("update")]
-        public IActionResult Put(Department department)
+        public IActionResult Update(Department department)
         {
             if (department == null || _repo.GetById(department.Id) == null)
                 return BadRequest();

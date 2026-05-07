@@ -1,11 +1,15 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using Lab03.Models.Validators;
 
 namespace Lab03.Models
 {
     public class Department
     {
+        [Key]
         public int Id { get; set; }
 
+        [Unique]
         public string Name { get; set; }
         public string Location { get; set; }
 

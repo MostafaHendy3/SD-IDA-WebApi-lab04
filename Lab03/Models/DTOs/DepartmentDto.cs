@@ -4,7 +4,11 @@ namespace Lab03.Models.DTOs
 {
     public class DepartmentDto
     {
-        public string DepartmentName { get; set; }
-        public List<StudentDto> Students { get; set; } = new List<StudentDto>();
+        public string DepName { get; set; }
+        public string DepLocation { get; set; }
+
+        public string DepPhoneNumber { get; set; }
+
+        public string DepManager { get; set; }
     }
 }
