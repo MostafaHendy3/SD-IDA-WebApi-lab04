@@ -1,0 +1,984 @@
+2026-05-08 15:35:45.0451|0|DEBUG|Lab04.Program|init main 
+2026-05-08 15:35:45.7144|10401|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
+2026-05-08 15:35:46.8531|10601|DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'UserId'} was not created on entity type 'IdentityUserRole<string>' as the properties are already covered by the index {'UserId', 'RoleId'}. 
+2026-05-08 15:35:46.8531|10601|DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'UserId'} was not created on entity type 'IdentityUserToken<string>' as the properties are already covered by the index {'UserId', 'LoginProvider', 'Name'}. 
+2026-05-08 15:35:47.0123|10600|DEBUG|Microsoft.EntityFrameworkCore.Model.Validation|The property 'Student.DepartmentId' was created in shadow state because there are no eligible CLR members with a matching name. 
+2026-05-08 15:35:47.1226|10403|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 10.0.7 initialized 'UniDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:10.0.7' with options: EngineType=SqlServer  
+2026-05-08 15:35:50.3434|10407|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'UniDbContext' disposed. 
+2026-05-08 15:36:02.2563|0|DEBUG|Lab04.Program|init main 
+2026-05-08 15:36:02.4953|10401|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
+2026-05-08 15:36:03.1191|10601|DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'UserId'} was not created on entity type 'IdentityUserRole<string>' as the properties are already covered by the index {'UserId', 'RoleId'}. 
+2026-05-08 15:36:03.1217|10601|DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'UserId'} was not created on entity type 'IdentityUserToken<string>' as the properties are already covered by the index {'UserId', 'LoginProvider', 'Name'}. 
+2026-05-08 15:36:03.2646|10600|DEBUG|Microsoft.EntityFrameworkCore.Model.Validation|The property 'Student.DepartmentId' was created in shadow state because there are no eligible CLR members with a matching name. 
+2026-05-08 15:36:03.3913|10403|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 10.0.7 initialized 'UniDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:10.0.7' with options: EngineType=SqlServer  
+2026-05-08 15:36:03.6413|20005|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Creating DbConnection. 
+2026-05-08 15:36:03.7138|20006|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Created DbConnection. (60ms). 
+2026-05-08 15:36:03.7138|20400|DEBUG|Microsoft.EntityFrameworkCore.Migrations|Migrating using database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-08 15:36:03.7344|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-08 15:36:04.4456|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-08 15:36:04.4523|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2026-05-08 15:36:04.4523|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (5ms). 
+2026-05-08 15:36:04.4523|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteNonQuery' (11ms). 
+2026-05-08 15:36:04.4701|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2026-05-08 15:36:04.5017|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (33ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2026-05-08 15:36:04.5017|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-08 15:36:04.5162|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS' (6ms). 
+2026-05-08 15:36:04.5162|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-08 15:36:04.5162|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-08 15:36:04.5162|20411|INFO|Microsoft.EntityFrameworkCore.Migrations|Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long. 
+2026-05-08 15:36:04.5162|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteScalar'. 
+2026-05-08 15:36:04.5162|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteScalar' (0ms). 
+2026-05-08 15:36:04.5162|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteScalar' (0ms). 
+2026-05-08 15:36:04.5162|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result 
+2026-05-08 15:36:04.5559|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (32ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result 
+2026-05-08 15:36:04.6455|20209|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Beginning transaction with isolation level 'Unspecified'. 
+2026-05-08 15:36:04.6546|20200|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Began transaction with isolation level 'ReadCommitted'. 
+2026-05-08 15:36:04.6546|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2026-05-08 15:36:04.6546|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.6546|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteNonQuery' (1ms). 
+2026-05-08 15:36:04.6546|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END; 
+2026-05-08 15:36:04.6546|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END; 
+2026-05-08 15:36:04.6546|20210|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committing transaction. 
+2026-05-08 15:36:04.6683|20202|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committed transaction. 
+2026-05-08 15:36:04.6683|20204|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Disposing transaction. 
+2026-05-08 15:36:04.6683|20209|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Beginning transaction with isolation level 'Unspecified'. 
+2026-05-08 15:36:04.6683|20200|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Began transaction with isolation level 'ReadCommitted'. 
+2026-05-08 15:36:04.6683|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2026-05-08 15:36:04.6683|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.6683|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.6683|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2026-05-08 15:36:04.6683|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2026-05-08 15:36:04.6683|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteScalar'. 
+2026-05-08 15:36:04.6683|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteScalar' (0ms). 
+2026-05-08 15:36:04.6683|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteScalar' (0ms). 
+2026-05-08 15:36:04.6683|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); 
+2026-05-08 15:36:04.6683|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); 
+2026-05-08 15:36:04.6683|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2026-05-08 15:36:04.6683|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2026-05-08 15:36:04.6683|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2026-05-08 15:36:04.6683|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId]; 
+2026-05-08 15:36:04.6886|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId]; 
+2026-05-08 15:36:04.6886|20301|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-08 15:36:04.6886|20300|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'UniDb' on server 'JUSTSASA\SQLEXPRESS' is being disposed after spending 3ms reading results. 
+2026-05-08 15:36:04.6998|20402|INFO|Microsoft.EntityFrameworkCore.Migrations|Applying migration '20260508123550_Identity'. 
+2026-05-08 15:36:04.7432|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2026-05-08 15:36:04.7432|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.7432|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.7432|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+); 
+2026-05-08 15:36:04.7535|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+); 
+2026-05-08 15:36:04.7535|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2026-05-08 15:36:04.7535|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.7535|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.7535|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUsers] (
+    [Id] nvarchar(450) NOT NULL,
+    [Address] nvarchar(max) NULL,
+    [UserName] nvarchar(256) NULL,
+    [NormalizedUserName] nvarchar(256) NULL,
+    [Email] nvarchar(256) NULL,
+    [NormalizedEmail] nvarchar(256) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    CONSTRAINT [PK_AspNetUsers] PRIMARY KEY ([Id])
+); 
+2026-05-08 15:36:04.7535|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUsers] (
+    [Id] nvarchar(450) NOT NULL,
+    [Address] nvarchar(max) NULL,
+    [UserName] nvarchar(256) NULL,
+    [NormalizedUserName] nvarchar(256) NULL,
+    [Email] nvarchar(256) NULL,
+    [NormalizedEmail] nvarchar(256) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    CONSTRAINT [PK_AspNetUsers] PRIMARY KEY ([Id])
+); 
+2026-05-08 15:36:04.7535|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2026-05-08 15:36:04.7535|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.7535|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.7535|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetRoleClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoleClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetRoleClaims_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE
+); 
+2026-05-08 15:36:04.7535|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetRoleClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoleClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetRoleClaims_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE
+); 
+2026-05-08 15:36:04.7535|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2026-05-08 15:36:04.7535|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.7535|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.7535|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUserClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetUserClaims_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+); 
+2026-05-08 15:36:04.7623|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUserClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetUserClaims_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+); 
+2026-05-08 15:36:04.7623|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2026-05-08 15:36:04.7623|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.7623|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.7623|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUserLogins] (
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [ProviderKey] nvarchar(450) NOT NULL,
+    [ProviderDisplayName] nvarchar(max) NULL,
+    [UserId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_AspNetUserLogins] PRIMARY KEY ([LoginProvider], [ProviderKey]),
+    CONSTRAINT [FK_AspNetUserLogins_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+); 
+2026-05-08 15:36:04.7623|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUserLogins] (
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [ProviderKey] nvarchar(450) NOT NULL,
+    [ProviderDisplayName] nvarchar(max) NULL,
+    [UserId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_AspNetUserLogins] PRIMARY KEY ([LoginProvider], [ProviderKey]),
+    CONSTRAINT [FK_AspNetUserLogins_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+); 
+2026-05-08 15:36:04.7623|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2026-05-08 15:36:04.7623|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.7623|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.7623|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUserRoles] (
+    [UserId] nvarchar(450) NOT NULL,
+    [RoleId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_AspNetUserRoles] PRIMARY KEY ([UserId], [RoleId]),
+    CONSTRAINT [FK_AspNetUserRoles_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_AspNetUserRoles_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+); 
+2026-05-08 15:36:04.7623|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUserRoles] (
+    [UserId] nvarchar(450) NOT NULL,
+    [RoleId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_AspNetUserRoles] PRIMARY KEY ([UserId], [RoleId]),
+    CONSTRAINT [FK_AspNetUserRoles_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_AspNetUserRoles_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+); 
+2026-05-08 15:36:04.7623|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2026-05-08 15:36:04.7623|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.7623|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.7623|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUserTokens] (
+    [UserId] nvarchar(450) NOT NULL,
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [Name] nvarchar(450) NOT NULL,
+    [Value] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserTokens] PRIMARY KEY ([UserId], [LoginProvider], [Name]),
+    CONSTRAINT [FK_AspNetUserTokens_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+); 
+2026-05-08 15:36:04.7623|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUserTokens] (
+    [UserId] nvarchar(450) NOT NULL,
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [Name] nvarchar(450) NOT NULL,
+    [Value] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserTokens] PRIMARY KEY ([UserId], [LoginProvider], [Name]),
+    CONSTRAINT [FK_AspNetUserTokens_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+); 
+2026-05-08 15:36:04.7623|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2026-05-08 15:36:04.7623|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.7623|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.7623|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_AspNetRoleClaims_RoleId] ON [AspNetRoleClaims] ([RoleId]); 
+2026-05-08 15:36:04.7795|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_AspNetRoleClaims_RoleId] ON [AspNetRoleClaims] ([RoleId]); 
+2026-05-08 15:36:04.7795|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2026-05-08 15:36:04.7795|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.7795|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.7795|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE UNIQUE INDEX [RoleNameIndex] ON [AspNetRoles] ([NormalizedName]) WHERE [NormalizedName] IS NOT NULL; 
+2026-05-08 15:36:04.7795|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE UNIQUE INDEX [RoleNameIndex] ON [AspNetRoles] ([NormalizedName]) WHERE [NormalizedName] IS NOT NULL; 
+2026-05-08 15:36:04.7795|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2026-05-08 15:36:04.7795|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.7795|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.7795|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserClaims_UserId] ON [AspNetUserClaims] ([UserId]); 
+2026-05-08 15:36:04.7795|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserClaims_UserId] ON [AspNetUserClaims] ([UserId]); 
+2026-05-08 15:36:04.7795|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2026-05-08 15:36:04.7795|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.7795|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.7795|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserLogins_UserId] ON [AspNetUserLogins] ([UserId]); 
+2026-05-08 15:36:04.7795|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserLogins_UserId] ON [AspNetUserLogins] ([UserId]); 
+2026-05-08 15:36:04.7795|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2026-05-08 15:36:04.7795|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.7795|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.7795|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserRoles_RoleId] ON [AspNetUserRoles] ([RoleId]); 
+2026-05-08 15:36:04.7795|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserRoles_RoleId] ON [AspNetUserRoles] ([RoleId]); 
+2026-05-08 15:36:04.7795|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2026-05-08 15:36:04.7795|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.7795|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.7795|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [EmailIndex] ON [AspNetUsers] ([NormalizedEmail]); 
+2026-05-08 15:36:04.7795|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [EmailIndex] ON [AspNetUsers] ([NormalizedEmail]); 
+2026-05-08 15:36:04.7795|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2026-05-08 15:36:04.7795|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.7795|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.7795|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE UNIQUE INDEX [UserNameIndex] ON [AspNetUsers] ([NormalizedUserName]) WHERE [NormalizedUserName] IS NOT NULL; 
+2026-05-08 15:36:04.7795|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE UNIQUE INDEX [UserNameIndex] ON [AspNetUsers] ([NormalizedUserName]) WHERE [NormalizedUserName] IS NOT NULL; 
+2026-05-08 15:36:04.7795|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2026-05-08 15:36:04.7795|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.7795|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-08 15:36:04.7795|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20260508123550_Identity', N'10.0.7'); 
+2026-05-08 15:36:04.7933|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20260508123550_Identity', N'10.0.7'); 
+2026-05-08 15:36:04.7933|20210|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committing transaction. 
+2026-05-08 15:36:04.7933|20202|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committed transaction. 
+2026-05-08 15:36:04.7933|20204|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Disposing transaction. 
+2026-05-08 15:36:04.7933|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteScalar'. 
+2026-05-08 15:36:04.7933|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteScalar' (0ms). 
+2026-05-08 15:36:04.7933|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteScalar' (0ms). 
+2026-05-08 15:36:04.7933|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result 
+2026-05-08 15:36:04.7933|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result 
+2026-05-08 15:36:04.7933|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-08 15:36:04.7933|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS' (0ms). 
+2026-05-08 15:36:04.7933|10407|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'UniDbContext' disposed. 
+2026-05-08 15:36:04.7933|20007|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposing connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-08 15:36:04.7933|20008|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposed connection to database '' on server '' (1ms). 
+2026-05-08 15:37:09.6770|0|DEBUG|Lab04.Program|init main 
+2026-05-08 15:37:09.8720|12|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2026-05-08 15:37:09.9521|1|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2026-05-08 15:37:09.9730|63|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\mr hendy\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2026-05-08 15:37:09.9835|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\mr hendy\AppData\Local\ASP.NET\DataProtection-Keys\key-b69f919c-f721-49f5-8038-156d2cd38d91.xml'. 
+2026-05-08 15:37:10.0094|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {b69f919c-f721-49f5-8038-156d2cd38d91}. 
+2026-05-08 15:37:10.0296|13|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {b69f919c-f721-49f5-8038-156d2cd38d91} with expiration date 2026-07-08 08:47:01Z as default key. 
+2026-05-08 15:37:10.0337|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=10.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2026-05-08 15:37:10.0337|51|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
+2026-05-08 15:37:10.0337|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=10.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2026-05-08 15:37:10.0337|4|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2026-05-08 15:37:10.0337|3|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2026-05-08 15:37:10.0337|2|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {b69f919c-f721-49f5-8038-156d2cd38d91} as the default key. 
+2026-05-08 15:37:10.0337|65|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {b69f919c-f721-49f5-8038-156d2cd38d91} was loaded during application startup. 
+2026-05-08 15:37:10.0501|0|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BlazorWasmHotReloadMiddleware|Middleware loaded 
+2026-05-08 15:37:10.0501|0|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserScriptMiddleware|Middleware loaded. Script /_framework/aspnetcore-browser-refresh.js (14915 B). 
+2026-05-08 15:37:10.0501|0|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserScriptMiddleware|Middleware loaded. Script /_framework/blazor-hotreload.js (799 B). 
+2026-05-08 15:37:10.2649|7|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Middleware configuration started with options: {AllowedHosts = *, AllowEmptyHosts = True, IncludeFailureMessage = True} 
+2026-05-08 15:37:10.2649|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2026-05-08 15:37:10.2649|0|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Middleware loaded: DOTNET_MODIFIABLE_ASSEMBLIES=debug, __ASPNETCORE_BROWSER_TOOLS=true 
+2026-05-08 15:37:10.2914|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5279 
+2026-05-08 15:37:10.2965|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Lab04 
+2026-05-08 15:37:10.2965|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2026-05-08 15:37:10.2965|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery 
+2026-05-08 15:37:10.2965|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net 
+2026-05-08 15:37:10.2965|2|DEBUG|Microsoft.AspNetCore.Mvc.ApiExplorer.ApiDescriptionGroupCollectionProvider|Executing API description provider 'EndpointMetadataApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v10.0.0.0. 
+2026-05-08 15:37:10.2965|2|DEBUG|Microsoft.AspNetCore.Mvc.ApiExplorer.ApiDescriptionGroupCollectionProvider|Executing API description provider 'DefaultApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v10.0.0.0. 
+2026-05-08 15:37:10.5442|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2026-05-08 15:37:10.5442|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2026-05-08 15:37:10.5442|0|INFO|Microsoft.Hosting.Lifetime|Content root path: E:\ITI\WebApi\lec01\Lab04 
+2026-05-08 15:37:10.5442|2|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2026-05-08 15:37:10.7555|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0Q" accepted. 
+2026-05-08 15:37:10.7555|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0Q" started. 
+2026-05-08 15:37:10.7616|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0R" accepted. 
+2026-05-08 15:37:10.7616|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0R" started. 
+2026-05-08 15:37:10.7939|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLCVQ34AD0Q" received FIN. 
+2026-05-08 15:37:10.7939|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLCVQ34AD0R" received FIN. 
+2026-05-08 15:37:10.7939|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLCVQ34AD0R" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2026-05-08 15:37:10.7939|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLCVQ34AD0Q" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2026-05-08 15:37:10.7960|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0Q" disconnecting. 
+2026-05-08 15:37:10.7960|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0R" disconnecting. 
+2026-05-08 15:37:10.7960|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0Q" stopped. 
+2026-05-08 15:37:10.7960|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0R" stopped. 
+2026-05-08 15:37:12.1191|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0S" accepted. 
+2026-05-08 15:37:12.1191|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0S" started. 
+2026-05-08 15:37:12.1553|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5279/swagger/index.html - - - 
+2026-05-08 15:37:12.2669|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-08 15:37:12.2921|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/index.html' 
+2026-05-08 15:37:12.2921|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2026-05-08 15:37:12.2921|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html 
+2026-05-08 15:37:12.3799|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0S" completed keep alive response. 
+2026-05-08 15:37:12.3799|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5279/swagger/index.html - 304 - - 228.2088ms 
+2026-05-08 15:37:12.4039|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5279/swagger/swagger-ui.css - - - 
+2026-05-08 15:37:12.4039|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0T" accepted. 
+2026-05-08 15:37:12.4039|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-08 15:37:12.4039|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0T" started. 
+2026-05-08 15:37:12.4039|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0U" accepted. 
+2026-05-08 15:37:12.4039|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0U" started. 
+2026-05-08 15:37:12.4039|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0V" accepted. 
+2026-05-08 15:37:12.4039|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0V" started. 
+2026-05-08 15:37:12.4039|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/swagger-ui.css' 
+2026-05-08 15:37:12.4039|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2026-05-08 15:37:12.4039|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css 
+2026-05-08 15:37:12.4039|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5279/swagger/index.css - - - 
+2026-05-08 15:37:12.4039|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-08 15:37:12.4039|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/index.css' 
+2026-05-08 15:37:12.4039|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2026-05-08 15:37:12.4039|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css 
+2026-05-08 15:37:12.4039|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD10" accepted. 
+2026-05-08 15:37:12.4039|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD10" started. 
+2026-05-08 15:37:12.4039|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5279/swagger/swagger-ui-bundle.js - - - 
+2026-05-08 15:37:12.4039|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-08 15:37:12.4039|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/swagger-ui-bundle.js' 
+2026-05-08 15:37:12.4039|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2026-05-08 15:37:12.4039|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js 
+2026-05-08 15:37:12.4039|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5279/swagger/swagger-ui-standalone-preset.js - - - 
+2026-05-08 15:37:12.4039|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5279/swagger/index.js - - - 
+2026-05-08 15:37:12.4039|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-08 15:37:12.4039|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-08 15:37:12.4039|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js' 
+2026-05-08 15:37:12.4039|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/index.js' 
+2026-05-08 15:37:12.4039|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2026-05-08 15:37:12.4039|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js 
+2026-05-08 15:37:12.4039|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2026-05-08 15:37:12.4039|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js 
+2026-05-08 15:37:12.4039|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD11" accepted. 
+2026-05-08 15:37:12.4039|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD11" started. 
+2026-05-08 15:37:12.4039|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - - - 
+2026-05-08 15:37:12.4039|0|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserScriptMiddleware|Script injected: /_framework/aspnetcore-browser-refresh.js 
+2026-05-08 15:37:12.4039|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD11" completed keep alive response. 
+2026-05-08 15:37:12.4039|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - 200 14915 application/javascript;+charset=utf-8 3.3466ms 
+2026-05-08 15:37:12.4039|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD10" completed keep alive response. 
+2026-05-08 15:37:12.4039|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5279/swagger/index.js - 200 - application/javascript;charset=utf-8 7.2687ms 
+2026-05-08 15:37:12.4301|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0S" completed keep alive response. 
+2026-05-08 15:37:12.4301|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0T" completed keep alive response. 
+2026-05-08 15:37:12.4301|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0V" completed keep alive response. 
+2026-05-08 15:37:12.4301|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5279/swagger/index.css - 304 - - 23.4696ms 
+2026-05-08 15:37:12.4301|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5279/swagger/swagger-ui-standalone-preset.js - 304 - - 22.4693ms 
+2026-05-08 15:37:12.4301|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5279/swagger/swagger-ui.css - 304 - - 26.3971ms 
+2026-05-08 15:37:12.4358|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0U" completed keep alive response. 
+2026-05-08 15:37:12.4358|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5279/swagger/swagger-ui-bundle.js - 304 - - 28.2654ms 
+2026-05-08 15:37:12.4745|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5279/_vs/browserLink - - - 
+2026-05-08 15:37:12.5221|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0U" completed keep alive response. 
+2026-05-08 15:37:12.5221|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5279/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 47.7989ms 
+2026-05-08 15:37:12.6438|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - - - 
+2026-05-08 15:37:12.6438|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-08 15:37:12.6438|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/v1/swagger.json' 
+2026-05-08 15:37:12.6438|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2026-05-08 15:37:12.6438|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json 
+2026-05-08 15:37:12.6576|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0U" completed keep alive response. 
+2026-05-08 15:37:12.6576|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 13.9980ms 
+2026-05-08 15:37:48.1481|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - - - 
+2026-05-08 15:37:48.1481|0|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserScriptMiddleware|Script injected: /_framework/aspnetcore-browser-refresh.js 
+2026-05-08 15:37:48.1481|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0U" completed keep alive response. 
+2026-05-08 15:37:48.1481|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - 200 14915 application/javascript;+charset=utf-8 1.0170ms 
+2026-05-08 15:37:48.3768|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - - - 
+2026-05-08 15:37:48.3768|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-08 15:37:48.3768|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/v1/swagger.json' 
+2026-05-08 15:37:48.3768|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2026-05-08 15:37:48.3768|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json 
+2026-05-08 15:37:48.3881|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0U" completed keep alive response. 
+2026-05-08 15:37:48.3881|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 11.5068ms 
+2026-05-08 15:38:16.3254|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD12" accepted. 
+2026-05-08 15:38:16.3254|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD12" started. 
+2026-05-08 15:38:16.3254|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD13" accepted. 
+2026-05-08 15:38:16.3254|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLCVQ34AD12" received FIN. 
+2026-05-08 15:38:16.3254|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLCVQ34AD12" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2026-05-08 15:38:16.3254|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD12" disconnecting. 
+2026-05-08 15:38:16.3254|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD13" started. 
+2026-05-08 15:38:16.3254|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD12" stopped. 
+2026-05-08 15:38:16.3254|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5279/Register - - - 
+2026-05-08 15:38:16.3254|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-08 15:38:16.3254|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/Register' 
+2026-05-08 15:38:16.3254|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2026-05-08 15:38:16.3254|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /Register 
+2026-05-08 15:38:16.3428|9|DEBUG|Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler|AuthenticationScheme: Identity.Application was not authenticated. 
+2026-05-08 15:38:16.3428|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD13" completed keep alive response. 
+2026-05-08 15:38:16.3428|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5279/Register - 404 0 - 15.9520ms 
+2026-05-08 15:38:16.3428|16|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5279/Register, Response status code: 404 
+2026-05-08 15:39:24.1727|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0S" disconnecting. 
+2026-05-08 15:39:24.1727|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0V" disconnecting. 
+2026-05-08 15:39:24.1727|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0S" stopped. 
+2026-05-08 15:39:24.1727|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0V" stopped. 
+2026-05-08 15:39:24.1727|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0T" disconnecting. 
+2026-05-08 15:39:24.1727|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0T" stopped. 
+2026-05-08 15:39:24.1727|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD10" disconnecting. 
+2026-05-08 15:39:24.1727|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD10" stopped. 
+2026-05-08 15:39:24.1727|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD11" disconnecting. 
+2026-05-08 15:39:24.1727|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD11" stopped. 
+2026-05-08 15:39:24.1727|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLCVQ34AD0S" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2026-05-08 15:39:24.1727|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLCVQ34AD0T" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2026-05-08 15:39:24.1727|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLCVQ34AD0V" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2026-05-08 15:39:24.1727|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLCVQ34AD10" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2026-05-08 15:39:24.1727|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLCVQ34AD11" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2026-05-08 15:39:26.5848|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD14" accepted. 
+2026-05-08 15:39:26.5848|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD14" started. 
+2026-05-08 15:39:26.5848|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLCVQ34AD14" received FIN. 
+2026-05-08 15:39:26.5848|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD14" disconnecting. 
+2026-05-08 15:39:26.5848|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD15" accepted. 
+2026-05-08 15:39:26.5848|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD14" stopped. 
+2026-05-08 15:39:26.5848|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD15" started. 
+2026-05-08 15:39:26.5848|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLCVQ34AD14" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2026-05-08 15:39:26.5848|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5279/Register - application/json 138 
+2026-05-08 15:39:26.5848|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-08 15:39:26.5848|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/Register' 
+2026-05-08 15:39:26.5848|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2026-05-08 15:39:26.5848|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: POST /Register 
+2026-05-08 15:39:26.5904|9|DEBUG|Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler|AuthenticationScheme: Identity.Application was not authenticated. 
+2026-05-08 15:39:26.5904|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD15" completed keep alive response. 
+2026-05-08 15:39:26.5904|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5279/Register - 404 0 - 3.5645ms 
+2026-05-08 15:39:26.5904|16|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5279/Register, Response status code: 404 
+2026-05-08 15:39:26.5904|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HNLCVQ34AD15", Request id "0HNLCVQ34AD15:00000001": started reading request body. 
+2026-05-08 15:39:26.5904|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HNLCVQ34AD15", Request id "0HNLCVQ34AD15:00000001": done reading request body. 
+2026-05-08 15:39:31.8531|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLCVQ34AD16" received FIN. 
+2026-05-08 15:39:31.8531|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD16" accepted. 
+2026-05-08 15:39:31.8531|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD16" started. 
+2026-05-08 15:39:31.8531|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLCVQ34AD16" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2026-05-08 15:39:31.8531|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD16" disconnecting. 
+2026-05-08 15:39:31.8531|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD16" stopped. 
+2026-05-08 15:39:32.0928|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5279/swagger/index.html - - - 
+2026-05-08 15:39:32.0928|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-08 15:39:32.0928|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/index.html' 
+2026-05-08 15:39:32.0928|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2026-05-08 15:39:32.0928|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html 
+2026-05-08 15:39:32.0928|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0U" completed keep alive response. 
+2026-05-08 15:39:32.0928|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5279/swagger/index.html - 304 - - 5.6959ms 
+2026-05-08 15:39:32.1201|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5279/swagger/swagger-ui.css - - - 
+2026-05-08 15:39:32.1201|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-08 15:39:32.1201|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/swagger-ui.css' 
+2026-05-08 15:39:32.1201|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2026-05-08 15:39:32.1201|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css 
+2026-05-08 15:39:32.1201|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0U" completed keep alive response. 
+2026-05-08 15:39:32.1201|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5279/swagger/swagger-ui.css - 304 - - 0.4928ms 
+2026-05-08 15:39:32.1209|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD17" accepted. 
+2026-05-08 15:39:32.1209|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD17" started. 
+2026-05-08 15:39:32.1209|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5279/swagger/index.css - - - 
+2026-05-08 15:39:32.1209|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-08 15:39:32.1209|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/index.css' 
+2026-05-08 15:39:32.1209|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2026-05-08 15:39:32.1209|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css 
+2026-05-08 15:39:32.1209|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD17" completed keep alive response. 
+2026-05-08 15:39:32.1209|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5279/swagger/index.css - 304 - - 0.2470ms 
+2026-05-08 15:39:32.1209|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5279/swagger/swagger-ui-bundle.js - - - 
+2026-05-08 15:39:32.1209|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-08 15:39:32.1209|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/swagger-ui-bundle.js' 
+2026-05-08 15:39:32.1209|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2026-05-08 15:39:32.1209|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js 
+2026-05-08 15:39:32.1209|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0U" completed keep alive response. 
+2026-05-08 15:39:32.1209|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5279/swagger/swagger-ui-bundle.js - 304 - - 0.2550ms 
+2026-05-08 15:39:32.1209|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD18" accepted. 
+2026-05-08 15:39:32.1209|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD18" started. 
+2026-05-08 15:39:32.1209|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD19" accepted. 
+2026-05-08 15:39:32.1209|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD19" started. 
+2026-05-08 15:39:32.1209|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5279/swagger/swagger-ui-standalone-preset.js - - - 
+2026-05-08 15:39:32.1209|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-08 15:39:32.1209|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js' 
+2026-05-08 15:39:32.1209|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2026-05-08 15:39:32.1209|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js 
+2026-05-08 15:39:32.1209|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5279/swagger/index.js - - - 
+2026-05-08 15:39:32.1209|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-08 15:39:32.1209|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/index.js' 
+2026-05-08 15:39:32.1209|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2026-05-08 15:39:32.1209|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD17" completed keep alive response. 
+2026-05-08 15:39:32.1209|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js 
+2026-05-08 15:39:32.1209|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5279/swagger/swagger-ui-standalone-preset.js - 304 - - 0.5101ms 
+2026-05-08 15:39:32.1209|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - - - 
+2026-05-08 15:39:32.1209|0|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserScriptMiddleware|Script injected: /_framework/aspnetcore-browser-refresh.js 
+2026-05-08 15:39:32.1209|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0U" completed keep alive response. 
+2026-05-08 15:39:32.1209|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD18" completed keep alive response. 
+2026-05-08 15:39:32.1209|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - 200 14915 application/javascript;+charset=utf-8 0.2087ms 
+2026-05-08 15:39:32.1209|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5279/swagger/index.js - 304 - - 0.7321ms 
+2026-05-08 15:39:32.1819|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5279/_vs/browserLink - - - 
+2026-05-08 15:39:32.1853|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0U" completed keep alive response. 
+2026-05-08 15:39:32.1853|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5279/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 3.4421ms 
+2026-05-08 15:39:32.3230|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - - - 
+2026-05-08 15:39:32.3230|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-08 15:39:32.3230|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/v1/swagger.json' 
+2026-05-08 15:39:32.3230|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2026-05-08 15:39:32.3230|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json 
+2026-05-08 15:39:32.3230|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0U" completed keep alive response. 
+2026-05-08 15:39:32.3230|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 6.6325ms 
+2026-05-08 15:39:36.5507|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5279/Register - application/json 138 
+2026-05-08 15:39:36.5507|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-08 15:39:36.5507|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/Register' 
+2026-05-08 15:39:36.5507|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2026-05-08 15:39:36.5507|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: POST /Register 
+2026-05-08 15:39:36.5657|9|DEBUG|Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler|AuthenticationScheme: Identity.Application was not authenticated. 
+2026-05-08 15:39:36.5657|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD15" completed keep alive response. 
+2026-05-08 15:39:36.5657|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5279/Register - 404 0 - 16.0148ms 
+2026-05-08 15:39:36.5657|16|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5279/Register, Response status code: 404 
+2026-05-08 15:39:36.5657|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HNLCVQ34AD15", Request id "0HNLCVQ34AD15:00000002": started reading request body. 
+2026-05-08 15:39:36.5657|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HNLCVQ34AD15", Request id "0HNLCVQ34AD15:00000002": done reading request body. 
+2026-05-08 15:39:49.1639|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5279/register - application/json 138 
+2026-05-08 15:39:49.1639|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-08 15:39:49.1639|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/register' 
+2026-05-08 15:39:49.1639|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2026-05-08 15:39:49.1639|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: POST /register 
+2026-05-08 15:39:49.1639|9|DEBUG|Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler|AuthenticationScheme: Identity.Application was not authenticated. 
+2026-05-08 15:39:49.1639|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD15" completed keep alive response. 
+2026-05-08 15:39:49.1639|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5279/register - 404 0 - 1.0078ms 
+2026-05-08 15:39:49.1639|16|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5279/register, Response status code: 404 
+2026-05-08 15:39:49.1639|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HNLCVQ34AD15", Request id "0HNLCVQ34AD15:00000003": started reading request body. 
+2026-05-08 15:39:49.1639|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HNLCVQ34AD15", Request id "0HNLCVQ34AD15:00000003": done reading request body. 
+2026-05-08 15:40:05.5770|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5279/api/register - application/json 138 
+2026-05-08 15:40:05.5770|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-08 15:40:05.5770|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/api/register' 
+2026-05-08 15:40:05.5770|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2026-05-08 15:40:05.5770|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: POST /api/register 
+2026-05-08 15:40:05.5770|9|DEBUG|Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler|AuthenticationScheme: Identity.Application was not authenticated. 
+2026-05-08 15:40:05.5770|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD15" completed keep alive response. 
+2026-05-08 15:40:05.5770|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5279/api/register - 404 0 - 1.2038ms 
+2026-05-08 15:40:05.5770|16|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5279/api/register, Response status code: 404 
+2026-05-08 15:40:05.5770|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HNLCVQ34AD15", Request id "0HNLCVQ34AD15:00000004": started reading request body. 
+2026-05-08 15:40:05.5770|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HNLCVQ34AD15", Request id "0HNLCVQ34AD15:00000004": done reading request body. 
+2026-05-08 15:40:17.7264|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5279/api/register - application/json 138 
+2026-05-08 15:40:17.7264|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-08 15:40:17.7264|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/api/register' 
+2026-05-08 15:40:17.7264|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2026-05-08 15:40:17.7264|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: POST /api/register 
+2026-05-08 15:40:17.7264|9|DEBUG|Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler|AuthenticationScheme: Identity.Application was not authenticated. 
+2026-05-08 15:40:17.7264|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD15" completed keep alive response. 
+2026-05-08 15:40:17.7264|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5279/api/register - 404 0 - 2.7478ms 
+2026-05-08 15:40:17.7264|16|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5279/api/register, Response status code: 404 
+2026-05-08 15:40:17.7264|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HNLCVQ34AD15", Request id "0HNLCVQ34AD15:00000005": started reading request body. 
+2026-05-08 15:40:17.7264|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HNLCVQ34AD15", Request id "0HNLCVQ34AD15:00000005": done reading request body. 
+2026-05-08 15:40:27.6026|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD13" disconnecting. 
+2026-05-08 15:40:27.6026|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD13" stopped. 
+2026-05-08 15:40:27.6026|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLCVQ34AD13" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2026-05-08 15:40:30.6072|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5279/api/Account/register - application/json 132 
+2026-05-08 15:40:30.6072|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-08 15:40:30.6254|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/Account/register' 
+2026-05-08 15:40:30.6254|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Lab04.Controllers.AccountController.Register (Lab04)' with route pattern 'api/Account/register' is valid for the request path '/api/Account/register' 
+2026-05-08 15:40:30.6254|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Lab04.Controllers.AccountController.Register (Lab04)' 
+2026-05-08 15:40:30.6254|8|TRACE|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|The endpoint does not specify the IRequestSizeLimitMetadata. 
+2026-05-08 15:40:30.6254|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: POST /api/Account/register 
+2026-05-08 15:40:30.6426|5|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing unprotect operation to key {b69f919c-f721-49f5-8038-156d2cd38d91} with purposes ('E:\ITI\WebApi\lec01\Lab04\', 'Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationMiddleware', 'Identity.Application', 'v2'). 
+2026-05-08 15:40:30.6426|7|INFO|Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler|Identity.Application was not authenticated. Failure message: Unprotect ticket failed 
+2026-05-08 15:40:30.6426|10|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware|No CORS policy found for the specified request. 
+2026-05-08 15:40:30.6426|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Lab04.Controllers.AccountController.Register (Lab04)' 
+2026-05-08 15:40:30.6886|102|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Lab04.Models.DTOs.RegisterDTO) on controller Lab04.Controllers.AccountController (Lab04). 
+2026-05-08 15:40:30.6886|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2026-05-08 15:40:30.6886|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2026-05-08 15:40:30.6886|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2026-05-08 15:40:30.6886|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): Lab04.Filters.ExceptionFilter 
+2026-05-08 15:40:30.6886|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000), Lab04.Filters.ResultFilter 
+2026-05-08 15:40:30.6886|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Lab04.Controllers.AccountController (Lab04) 
+2026-05-08 15:40:30.8281|10401|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
+2026-05-08 15:40:30.8956|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Lab04.Controllers.AccountController (Lab04) 
+2026-05-08 15:40:30.8956|22|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'request' of type 'Lab04.Models.DTOs.RegisterDTO' ... 
+2026-05-08 15:40:30.8956|44|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'request' of type 'Lab04.Models.DTOs.RegisterDTO' using the name '' in request data ... 
+2026-05-08 15:40:30.8956|1|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2026-05-08 15:40:30.9123|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HNLCVQ34AD0U", Request id "0HNLCVQ34AD0U:0000000C": started reading request body. 
+2026-05-08 15:40:30.9123|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HNLCVQ34AD0U", Request id "0HNLCVQ34AD0U:0000000C": done reading request body. 
+2026-05-08 15:40:30.9248|2|DEBUG|Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter|JSON input formatter succeeded, deserializing to type 'Lab04.Models.DTOs.RegisterDTO' 
+2026-05-08 15:40:30.9248|45|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'request' of type 'Lab04.Models.DTOs.RegisterDTO'. 
+2026-05-08 15:40:30.9248|23|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'request' of type 'Lab04.Models.DTOs.RegisterDTO'. 
+2026-05-08 15:40:30.9248|26|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'request' of type 'Lab04.Models.DTOs.RegisterDTO' ... 
+2026-05-08 15:40:30.9248|27|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'request' of type 'Lab04.Models.DTOs.RegisterDTO'. 
+2026-05-08 15:40:30.9372|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2026-05-08 15:40:30.9372|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2026-05-08 15:40:30.9372|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2026-05-08 15:40:30.9372|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2026-05-08 15:40:30.9372|101|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Lab04.Controllers.AccountController.Register (Lab04) - Validation state: Valid 
+2026-05-08 15:40:30.9372|102|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Lab04.Controllers.AccountController.Register (Lab04) with arguments (Lab04.Models.DTOs.RegisterDTO) 
+2026-05-08 15:40:30.9606|14|DEBUG|Microsoft.AspNetCore.Identity.UserManager|User password validation failed: PasswordRequiresNonAlphanumeric;PasswordRequiresLower;PasswordRequiresUpper. 
+2026-05-08 15:40:30.9747|103|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Lab04.Controllers.AccountController.Register (Lab04), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 11.6078ms. 
+2026-05-08 15:40:30.9747|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2026-05-08 15:40:30.9747|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2026-05-08 15:40:30.9747|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2026-05-08 15:40:30.9747|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2026-05-08 15:40:30.9747|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2026-05-08 15:40:30.9747|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2026-05-08 15:40:30.9747|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Lab04.Filters.ResultFilter. 
+2026-05-08 15:40:30.9860|0|INFO|Lab04.Filters.ResultFilter|OnResultExecuting: Header: server-time: 5/8/2026 3:40:30 PM 
+2026-05-08 15:40:30.9860|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Lab04.Filters.ResultFilter. 
+2026-05-08 15:40:30.9860|5|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult. 
+2026-05-08 15:40:30.9860|11|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2026-05-08 15:40:30.9860|4|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2026-05-08 15:40:30.9860|8|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2026-05-08 15:40:30.9860|10|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2026-05-08 15:40:30.9860|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response. 
+2026-05-08 15:40:30.9860|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.Collections.Generic.List`1[[Microsoft.AspNetCore.Identity.IdentityError, Microsoft.Extensions.Identity.Core, Version=10.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]'. 
+2026-05-08 15:40:30.9998|6|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult. 
+2026-05-08 15:40:30.9998|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Lab04.Filters.ResultFilter. 
+2026-05-08 15:40:30.9998|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Lab04.Filters.ResultFilter. 
+2026-05-08 15:40:30.9998|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2026-05-08 15:40:30.9998|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2026-05-08 15:40:31.0108|105|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Lab04.Controllers.AccountController.Register (Lab04) in 309.1134ms 
+2026-05-08 15:40:31.0108|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Lab04.Controllers.AccountController.Register (Lab04)' 
+2026-05-08 15:40:31.0108|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0U" completed keep alive response. 
+2026-05-08 15:40:31.0108|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5279/api/Account/register - 400 - application/json;+charset=utf-8 407.2086ms 
+2026-05-08 15:41:02.3422|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLCVQ34AD19" received FIN. 
+2026-05-08 15:41:02.3422|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD19" disconnecting. 
+2026-05-08 15:41:02.3422|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD19" stopped. 
+2026-05-08 15:41:02.3422|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLCVQ34AD19" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2026-05-08 15:41:02.3422|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5279/api/Account/register - application/json 140 
+2026-05-08 15:41:02.3422|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-08 15:41:02.3422|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/Account/register' 
+2026-05-08 15:41:02.3422|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Lab04.Controllers.AccountController.Register (Lab04)' with route pattern 'api/Account/register' is valid for the request path '/api/Account/register' 
+2026-05-08 15:41:02.3422|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Lab04.Controllers.AccountController.Register (Lab04)' 
+2026-05-08 15:41:02.3422|8|TRACE|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|The endpoint does not specify the IRequestSizeLimitMetadata. 
+2026-05-08 15:41:02.3422|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: POST /api/Account/register 
+2026-05-08 15:41:02.3422|5|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing unprotect operation to key {b69f919c-f721-49f5-8038-156d2cd38d91} with purposes ('E:\ITI\WebApi\lec01\Lab04\', 'Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationMiddleware', 'Identity.Application', 'v2'). 
+2026-05-08 15:41:02.3422|7|INFO|Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler|Identity.Application was not authenticated. Failure message: Unprotect ticket failed 
+2026-05-08 15:41:02.3422|10|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware|No CORS policy found for the specified request. 
+2026-05-08 15:41:02.3422|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Lab04.Controllers.AccountController.Register (Lab04)' 
+2026-05-08 15:41:02.3422|102|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Lab04.Models.DTOs.RegisterDTO) on controller Lab04.Controllers.AccountController (Lab04). 
+2026-05-08 15:41:02.3422|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2026-05-08 15:41:02.3422|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2026-05-08 15:41:02.3422|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2026-05-08 15:41:02.3422|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): Lab04.Filters.ExceptionFilter 
+2026-05-08 15:41:02.3422|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000), Lab04.Filters.ResultFilter 
+2026-05-08 15:41:02.3422|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Lab04.Controllers.AccountController (Lab04) 
+2026-05-08 15:41:02.3595|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Lab04.Controllers.AccountController (Lab04) 
+2026-05-08 15:41:02.3595|22|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'request' of type 'Lab04.Models.DTOs.RegisterDTO' ... 
+2026-05-08 15:41:02.3595|44|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'request' of type 'Lab04.Models.DTOs.RegisterDTO' using the name '' in request data ... 
+2026-05-08 15:41:02.3595|1|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2026-05-08 15:41:02.3595|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HNLCVQ34AD0U", Request id "0HNLCVQ34AD0U:0000000D": started reading request body. 
+2026-05-08 15:41:02.3595|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HNLCVQ34AD0U", Request id "0HNLCVQ34AD0U:0000000D": done reading request body. 
+2026-05-08 15:41:02.3595|2|DEBUG|Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter|JSON input formatter succeeded, deserializing to type 'Lab04.Models.DTOs.RegisterDTO' 
+2026-05-08 15:41:02.3595|45|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'request' of type 'Lab04.Models.DTOs.RegisterDTO'. 
+2026-05-08 15:41:02.3595|23|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'request' of type 'Lab04.Models.DTOs.RegisterDTO'. 
+2026-05-08 15:41:02.3595|26|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'request' of type 'Lab04.Models.DTOs.RegisterDTO' ... 
+2026-05-08 15:41:02.3595|27|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'request' of type 'Lab04.Models.DTOs.RegisterDTO'. 
+2026-05-08 15:41:02.3595|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2026-05-08 15:41:02.3595|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2026-05-08 15:41:02.3595|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2026-05-08 15:41:02.3595|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2026-05-08 15:41:02.3595|101|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Lab04.Controllers.AccountController.Register (Lab04) - Validation state: Valid 
+2026-05-08 15:41:02.3595|102|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Lab04.Controllers.AccountController.Register (Lab04) with arguments (Lab04.Models.DTOs.RegisterDTO) 
+2026-05-08 15:41:02.3595|14|DEBUG|Microsoft.AspNetCore.Identity.UserManager|User password validation failed: PasswordRequiresNonAlphanumeric. 
+2026-05-08 15:41:02.3595|103|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Lab04.Controllers.AccountController.Register (Lab04), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 0.2872ms. 
+2026-05-08 15:41:02.3595|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2026-05-08 15:41:02.3595|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2026-05-08 15:41:02.3595|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2026-05-08 15:41:02.3595|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2026-05-08 15:41:02.3595|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2026-05-08 15:41:02.3595|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2026-05-08 15:41:02.3595|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Lab04.Filters.ResultFilter. 
+2026-05-08 15:41:02.3595|0|INFO|Lab04.Filters.ResultFilter|OnResultExecuting: Header: server-time: 5/8/2026 3:41:02 PM 
+2026-05-08 15:41:02.3889|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Lab04.Filters.ResultFilter. 
+2026-05-08 15:41:02.3889|5|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult. 
+2026-05-08 15:41:02.3889|11|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2026-05-08 15:41:02.3889|4|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2026-05-08 15:41:02.3889|8|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2026-05-08 15:41:02.3889|10|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2026-05-08 15:41:02.3889|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response. 
+2026-05-08 15:41:02.3889|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.Collections.Generic.List`1[[Microsoft.AspNetCore.Identity.IdentityError, Microsoft.Extensions.Identity.Core, Version=10.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]'. 
+2026-05-08 15:41:02.3889|6|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult. 
+2026-05-08 15:41:02.3889|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Lab04.Filters.ResultFilter. 
+2026-05-08 15:41:02.3889|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Lab04.Filters.ResultFilter. 
+2026-05-08 15:41:02.3889|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2026-05-08 15:41:02.3889|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2026-05-08 15:41:02.3889|105|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Lab04.Controllers.AccountController.Register (Lab04) in 44.5168ms 
+2026-05-08 15:41:02.3889|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Lab04.Controllers.AccountController.Register (Lab04)' 
+2026-05-08 15:41:02.3889|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0U" completed keep alive response. 
+2026-05-08 15:41:02.3889|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5279/api/Account/register - 400 - application/json;+charset=utf-8 47.1308ms 
+2026-05-08 15:41:21.5281|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5279/api/Account/register - application/json 142 
+2026-05-08 15:41:21.5281|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-08 15:41:21.5281|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/Account/register' 
+2026-05-08 15:41:21.5281|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Lab04.Controllers.AccountController.Register (Lab04)' with route pattern 'api/Account/register' is valid for the request path '/api/Account/register' 
+2026-05-08 15:41:21.5281|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Lab04.Controllers.AccountController.Register (Lab04)' 
+2026-05-08 15:41:21.5281|8|TRACE|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|The endpoint does not specify the IRequestSizeLimitMetadata. 
+2026-05-08 15:41:21.5281|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: POST /api/Account/register 
+2026-05-08 15:41:21.5281|5|TRACE|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector|Performing unprotect operation to key {b69f919c-f721-49f5-8038-156d2cd38d91} with purposes ('E:\ITI\WebApi\lec01\Lab04\', 'Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationMiddleware', 'Identity.Application', 'v2'). 
+2026-05-08 15:41:21.5281|7|INFO|Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler|Identity.Application was not authenticated. Failure message: Unprotect ticket failed 
+2026-05-08 15:41:21.5281|10|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware|No CORS policy found for the specified request. 
+2026-05-08 15:41:21.5281|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Lab04.Controllers.AccountController.Register (Lab04)' 
+2026-05-08 15:41:21.5281|102|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Lab04.Models.DTOs.RegisterDTO) on controller Lab04.Controllers.AccountController (Lab04). 
+2026-05-08 15:41:21.5281|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2026-05-08 15:41:21.5281|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2026-05-08 15:41:21.5281|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2026-05-08 15:41:21.5281|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): Lab04.Filters.ExceptionFilter 
+2026-05-08 15:41:21.5281|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000), Lab04.Filters.ResultFilter 
+2026-05-08 15:41:21.5281|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Lab04.Controllers.AccountController (Lab04) 
+2026-05-08 15:41:21.5559|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Lab04.Controllers.AccountController (Lab04) 
+2026-05-08 15:41:21.5559|22|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'request' of type 'Lab04.Models.DTOs.RegisterDTO' ... 
+2026-05-08 15:41:21.5559|44|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'request' of type 'Lab04.Models.DTOs.RegisterDTO' using the name '' in request data ... 
+2026-05-08 15:41:21.5559|1|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2026-05-08 15:41:21.5559|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HNLCVQ34AD0U", Request id "0HNLCVQ34AD0U:0000000E": started reading request body. 
+2026-05-08 15:41:21.5559|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HNLCVQ34AD0U", Request id "0HNLCVQ34AD0U:0000000E": done reading request body. 
+2026-05-08 15:41:21.5559|2|DEBUG|Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter|JSON input formatter succeeded, deserializing to type 'Lab04.Models.DTOs.RegisterDTO' 
+2026-05-08 15:41:21.5559|45|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'request' of type 'Lab04.Models.DTOs.RegisterDTO'. 
+2026-05-08 15:41:21.5559|23|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'request' of type 'Lab04.Models.DTOs.RegisterDTO'. 
+2026-05-08 15:41:21.5559|26|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'request' of type 'Lab04.Models.DTOs.RegisterDTO' ... 
+2026-05-08 15:41:21.5559|27|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'request' of type 'Lab04.Models.DTOs.RegisterDTO'. 
+2026-05-08 15:41:21.5559|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2026-05-08 15:41:21.5559|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2026-05-08 15:41:21.5559|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2026-05-08 15:41:21.5559|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2026-05-08 15:41:21.5559|101|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Lab04.Controllers.AccountController.Register (Lab04) - Validation state: Valid 
+2026-05-08 15:41:21.5559|102|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Lab04.Controllers.AccountController.Register (Lab04) with arguments (Lab04.Models.DTOs.RegisterDTO) 
+2026-05-08 15:41:22.3431|10601|DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'UserId'} was not created on entity type 'IdentityUserRole<string>' as the properties are already covered by the index {'UserId', 'RoleId'}. 
+2026-05-08 15:41:22.3431|10601|DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'UserId'} was not created on entity type 'IdentityUserToken<string>' as the properties are already covered by the index {'UserId', 'LoginProvider', 'Name'}. 
+2026-05-08 15:41:22.4907|10600|DEBUG|Microsoft.EntityFrameworkCore.Model.Validation|The property 'Student.DepartmentId' was created in shadow state because there are no eligible CLR members with a matching name. 
+2026-05-08 15:41:22.6011|10403|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 10.0.7 initialized 'UniDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:10.0.7' with options: EngineType=SqlServer  
+2026-05-08 15:41:22.8082|10111|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<ApplicationUser>()
+    .FirstOrDefault(u => u.NormalizedUserName == @normalizedUserName)' 
+2026-05-08 15:41:23.3003|10107|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<ApplicationUser>(
+    asyncEnumerable: SingleQueryingEnumerable.Create<ApplicationUser>(
+        relationalQueryContext: (RelationalQueryContext)queryContext, 
+        relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IPropertyBase, int> { [Property: ApplicationUser.Id (string) Required PK AfterSave:Throw, 0], [Property: ApplicationUser.AccessFailedCount (int) Required, 1], [Property: ApplicationUser.Address (string), 2], [Property: ApplicationUser.ConcurrencyStamp (string) Concurrency, 3], [Property: ApplicationUser.Email (string) MaxLength(256), 4], [Property: ApplicationUser.EmailConfirmed (bool) Required, 5], [Property: ApplicationUser.LockoutEnabled (bool) Required, 6], [Property: ApplicationUser.LockoutEnd (DateTimeOffset?), 7], [Property: ApplicationUser.NormalizedEmail (string) Index MaxLength(256), 8], [Property: ApplicationUser.NormalizedUserName (string) Index MaxLength(256), 9], [Property: ApplicationUser.PasswordHash (string), 10], [Property: ApplicationUser.PhoneNumber (string), 11], [Property: ApplicationUser.PhoneNumberConfirmed (bool) Required, 12], [Property: ApplicationUser.SecurityStamp (string), 13], [Property: ApplicationUser.TwoFactorEnabled (bool) Required, 14], [Property: ApplicationUser.UserName (string) MaxLength(256), 15] }
+            SELECT TOP(1) a.Id, a.AccessFailedCount, a.Address, a.ConcurrencyStamp, a.Email, a.EmailConfirmed, a.LockoutEnabled, a.LockoutEnd, a.NormalizedEmail, a.NormalizedUserName, a.PasswordHash, a.PhoneNumber, a.PhoneNumberConfirmed, a.SecurityStamp, a.TwoFactorEnabled, a.UserName
+            FROM AspNetUsers AS a
+            WHERE a.NormalizedUserName == @normalizedUserName) | Resolver: c => new RelationalCommandCache(
+            c.Dependencies.MemoryCache, 
+            c.RelationalDependencies.QuerySqlGeneratorFactory, 
+            c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IPropertyBase, int> { [Property: ApplicationUser.Id (string) Required PK AfterSave:Throw, 0], [Property: ApplicationUser.AccessFailedCount (int) Required, 1], [Property: ApplicationUser.Address (string), 2], [Property: ApplicationUser.ConcurrencyStamp (string) Concurrency, 3], [Property: ApplicationUser.Email (string) MaxLength(256), 4], [Property: ApplicationUser.EmailConfirmed (bool) Required, 5], [Property: ApplicationUser.LockoutEnabled (bool) Required, 6], [Property: ApplicationUser.LockoutEnd (DateTimeOffset?), 7], [Property: ApplicationUser.NormalizedEmail (string) Index MaxLength(256), 8], [Property: ApplicationUser.NormalizedUserName (string) Index MaxLength(256), 9], [Property: ApplicationUser.PasswordHash (string), 10], [Property: ApplicationUser.PhoneNumber (string), 11], [Property: ApplicationUser.PhoneNumberConfirmed (bool) Required, 12], [Property: ApplicationUser.SecurityStamp (string), 13], [Property: ApplicationUser.TwoFactorEnabled (bool) Required, 14], [Property: ApplicationUser.UserName (string) MaxLength(256), 15] }
+            SELECT TOP(1) a.Id, a.AccessFailedCount, a.Address, a.ConcurrencyStamp, a.Email, a.EmailConfirmed, a.LockoutEnabled, a.LockoutEnd, a.NormalizedEmail, a.NormalizedUserName, a.PasswordHash, a.PhoneNumber, a.PhoneNumberConfirmed, a.SecurityStamp, a.TwoFactorEnabled, a.UserName
+            FROM AspNetUsers AS a
+            WHERE a.NormalizedUserName == @normalizedUserName, 
+            False, 
+            MultipleParameters
+        )].GetRelationalCommandTemplate(parameters), 
+        readerColumns: null, 
+        shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+        {
+            ApplicationUser entity;
+            entity = 
+            {
+                MaterializationContext materializationContext1;
+                IEntityType entityType1;
+                ApplicationUser instance1;
+                InternalEntityEntry entry1;
+                bool hasNullKey1;
+                materializationContext1 = new MaterializationContext(
+                    [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                    queryContext.Context
+                );
+                instance1 = default(ApplicationUser);
+                entry1 = queryContext.TryGetEntry(
+                    key: [LIFTABLE Constant: Key: ApplicationUser.Id PK | Resolver: c => c.Dependencies.Model.FindEntityType("Lab04.Models.ApplicationUser").FindPrimaryKey()], 
+                    keyValues: new object[]{ (object)dataReader.GetString(0) }, 
+                    throwOnNullKey: True, 
+                    hasNullKey: hasNullKey1);
+                !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+                {
+                    entityType1 = entry1.EntityType;
+                    return instance1 = (ApplicationUser)entry1.Entity;
+                } : 
+                {
+                    ISnapshot shadowSnapshot1;
+                    shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                    entityType1 = [LIFTABLE Constant: EntityType: ApplicationUser | Resolver: namelessParameter{0} => namelessParameter{0}.Dependencies.Model.FindEntityType("Lab04.Models.ApplicationUser")];
+                    instance1 = switch (entityType1)
+                    {
+                        case [LIFTABLE Constant: EntityType: ApplicationUser | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType("Lab04.Models.ApplicationUser")]: 
+                            {
+                                return 
+                                {
+                                    ApplicationUser instance;
+                                    instance = new ApplicationUser();
+                                    instance.<Id>k__BackingField = dataReader.GetString(0);
+                                    instance.<AccessFailedCount>k__BackingField = dataReader.GetInt32(1);
+                                    instance.<Address>k__BackingField = dataReader.IsDBNull(2) ? default(string) : dataReader.GetString(2);
+                                    instance.<ConcurrencyStamp>k__BackingField = dataReader.IsDBNull(3) ? default(string) : dataReader.GetString(3);
+                                    instance.<Email>k__BackingField = dataReader.IsDBNull(4) ? default(string) : dataReader.GetString(4);
+                                    instance.<EmailConfirmed>k__BackingField = dataReader.GetBoolean(5);
+                                    instance.<LockoutEnabled>k__BackingField = dataReader.GetBoolean(6);
+                                    instance.<LockoutEnd>k__BackingField = dataReader.IsDBNull(7) ? default(DateTimeOffset?) : (DateTimeOffset?)dataReader.GetFieldValue<DateTimeOffset>(7);
+                                    instance.<NormalizedEmail>k__BackingField = dataReader.IsDBNull(8) ? default(string) : dataReader.GetString(8);
+                                    instance.<NormalizedUserName>k__BackingField = dataReader.IsDBNull(9) ? default(string) : dataReader.GetString(9);
+                                    instance.<PasswordHash>k__BackingField = dataReader.IsDBNull(10) ? default(string) : dataReader.GetString(10);
+                                    instance.<PhoneNumber>k__BackingField = dataReader.IsDBNull(11) ? default(string) : dataReader.GetString(11);
+                                    instance.<PhoneNumberConfirmed>k__BackingField = dataReader.GetBoolean(12);
+                                    instance.<SecurityStamp>k__BackingField = dataReader.IsDBNull(13) ? default(string) : dataReader.GetString(13);
+                                    instance.<TwoFactorEnabled>k__BackingField = dataReader.GetBoolean(14);
+                                    instance.<UserName>k__BackingField = dataReader.IsDBNull(15) ? default(string) : dataReader.GetString(15);
+                                    (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                        context: materializationContext1.Context, 
+                                        entity: instance, 
+                                        queryTrackingBehavior: TrackAll, 
+                                        structuralType: [LIFTABLE Constant: EntityType: ApplicationUser | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType("Lab04.Models.ApplicationUser")]) : default(void);
+                                    return instance;
+                                }}
+                        default: 
+                            default(ApplicationUser)
+                    }
+                    ;
+                    entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                        entityType: entityType1, 
+                        entity: instance1, 
+                        snapshot: shadowSnapshot1);
+                    return instance1;
+                } : default(void);
+                return instance1;
+            };
+            return entity;
+        }, 
+        contextType: Lab04.Models.UniDbContext, 
+        standAloneStateManager: False, 
+        detailedErrorsEnabled: False, 
+        threadSafetyChecksEnabled: True), 
+    cancellationToken: queryContext.CancellationToken)' 
+2026-05-08 15:41:23.4040|20005|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Creating DbConnection. 
+2026-05-08 15:41:23.4351|20006|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Created DbConnection. (26ms). 
+2026-05-08 15:41:23.4351|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-08 15:41:23.6869|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-08 15:41:23.6869|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2026-05-08 15:41:23.6869|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (4ms). 
+2026-05-08 15:41:23.7406|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (49ms). 
+2026-05-08 15:41:23.7606|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @normalizedUserName 
+2026-05-08 15:41:24.1023|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (353ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @normalizedUserName 
+2026-05-08 15:41:24.1311|20301|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-08 15:41:24.1434|20300|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'UniDb' on server 'JUSTSASA\SQLEXPRESS' is being disposed after spending 33ms reading results. 
+2026-05-08 15:41:24.1434|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-08 15:41:24.1581|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS' (9ms). 
+2026-05-08 15:41:24.2965|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'UniDbContext' started tracking 'ApplicationUser' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2026-05-08 15:41:24.2965|10004|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges starting for 'UniDbContext'. 
+2026-05-08 15:41:24.2965|10800|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges starting for 'UniDbContext'. 
+2026-05-08 15:41:24.3278|10801|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges completed for 'UniDbContext'. 
+2026-05-08 15:41:24.4015|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-08 15:41:24.4015|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-08 15:41:24.4052|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2026-05-08 15:41:24.4052|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2026-05-08 15:41:24.4052|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2026-05-08 15:41:24.4052|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15); 
+2026-05-08 15:41:24.4258|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (20ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15); 
+2026-05-08 15:41:24.4258|20301|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-08 15:41:24.4258|20300|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'UniDb' on server 'JUSTSASA\SQLEXPRESS' is being disposed after spending 3ms reading results. 
+2026-05-08 15:41:24.4258|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-08 15:41:24.4258|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS' (0ms). 
+2026-05-08 15:41:24.4388|10807|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'ApplicationUser' tracked by 'UniDbContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2026-05-08 15:41:24.4388|10005|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges completed for 'UniDbContext' with 1 entities written to the database. 
+2026-05-08 15:41:24.4388|103|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Lab04.Controllers.AccountController.Register (Lab04), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2887.1874ms. 
+2026-05-08 15:41:24.4388|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2026-05-08 15:41:24.4388|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2026-05-08 15:41:24.4388|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2026-05-08 15:41:24.4388|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2026-05-08 15:41:24.4388|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2026-05-08 15:41:24.4388|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2026-05-08 15:41:24.4388|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Lab04.Filters.ResultFilter. 
+2026-05-08 15:41:24.4388|0|INFO|Lab04.Filters.ResultFilter|OnResultExecuting: Header: server-time: 5/8/2026 3:41:24 PM 
+2026-05-08 15:41:24.4388|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Lab04.Filters.ResultFilter. 
+2026-05-08 15:41:24.4388|5|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2026-05-08 15:41:24.4388|11|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2026-05-08 15:41:24.4388|4|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2026-05-08 15:41:24.4388|8|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2026-05-08 15:41:24.4388|10|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2026-05-08 15:41:24.4388|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response. 
+2026-05-08 15:41:24.4388|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2026-05-08 15:41:24.4388|6|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2026-05-08 15:41:24.4388|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Lab04.Filters.ResultFilter. 
+2026-05-08 15:41:24.4388|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Lab04.Filters.ResultFilter. 
+2026-05-08 15:41:24.4388|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2026-05-08 15:41:24.4388|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2026-05-08 15:41:24.4388|105|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Lab04.Controllers.AccountController.Register (Lab04) in 2918.478ms 
+2026-05-08 15:41:24.4388|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Lab04.Controllers.AccountController.Register (Lab04)' 
+2026-05-08 15:41:24.4507|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0U" completed keep alive response. 
+2026-05-08 15:41:24.4507|10407|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'UniDbContext' disposed. 
+2026-05-08 15:41:24.4507|20007|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposing connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-08 15:41:24.4507|20008|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposed connection to database '' on server '' (1ms). 
+2026-05-08 15:41:24.4507|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5279/api/Account/register - 200 - application/json;+charset=utf-8 2928.3972ms 
+2026-05-08 15:41:43.1313|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD18" disconnecting. 
+2026-05-08 15:41:43.1313|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD17" disconnecting. 
+2026-05-08 15:41:43.1313|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD18" stopped. 
+2026-05-08 15:41:43.1313|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD17" stopped. 
+2026-05-08 15:41:43.1313|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLCVQ34AD17" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2026-05-08 15:41:43.1313|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLCVQ34AD18" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2026-05-08 15:42:29.4886|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD15" disconnecting. 
+2026-05-08 15:42:29.4886|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD15" stopped. 
+2026-05-08 15:42:29.4886|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLCVQ34AD15" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2026-05-08 15:43:35.0002|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0U" disconnecting. 
+2026-05-08 15:43:35.0002|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLCVQ34AD0U" stopped. 
+2026-05-08 15:43:35.0002|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLCVQ34AD0U" sending FIN because: "The Socket transport's send loop completed gracefully." 

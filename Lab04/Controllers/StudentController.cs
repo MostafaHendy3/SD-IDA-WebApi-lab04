@@ -1,8 +1,6 @@
 ﻿using Lab04.Models;
 using Lab04.Repositories;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
 
 namespace Lab04.Controllers
 {
@@ -10,13 +8,13 @@ namespace Lab04.Controllers
     [ApiController]
     public class StudentController : ControllerBase
     {
-        private IRepository<Student> _repo;
+        private readonly IRepository<Student> _repo;
+        private readonly IUnitOfWork _unitOfWork;
 
-        // private readonly UniDbContext _context;
-
-        public StudentController(IRepository<Student> repo)
+        public StudentController(IRepository<Student> repo, IUnitOfWork unitOfWork)
         {
             _repo = repo;
+            _unitOfWork = unitOfWork;
         }
 
         //getAll
@@ -72,33 +70,35 @@ namespace Lab04.Controllers
         //add
         [HttpPost]
         [Route("add")]
-        public IActionResult Add(Student student)
+        public async Task<IActionResult> Add(Student student)
         {
             if (student == null || _repo.GetByName(student.SSN) != null)
             {
                 return BadRequest();
             }
             _repo.Add(student);
+            await _unitOfWork.SaveChangesAsync();
             return CreatedAtAction(nameof(GetById), new { id = student.SSN }, student);
         }
 
         //Update
         [HttpPut]
         [Route("update/")]
-        public IActionResult Put(Student student)
+        public async Task<IActionResult> Put(Student student)
         {
             if (student == null || _repo.GetByName(student.SSN) == null)
             {
                 return BadRequest();
             }
             _repo.Update(student);
+            await _unitOfWork.SaveChangesAsync();
             return Ok(student);
         }
 
         //Delete
         [HttpDelete]
         [Route("delete/{id:int}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
             var student = _repo.GetById(id);
             if (student == null)
@@ -106,6 +106,7 @@ namespace Lab04.Controllers
                 return NotFound();
             }
             _repo.Remove(student);
+            await _unitOfWork.SaveChangesAsync();
             return Ok(student);
         }
     }

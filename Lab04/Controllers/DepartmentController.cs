@@ -15,10 +15,12 @@ namespace Lab04.Controllers
     public class DepartmentController : ControllerBase
     {
         private readonly IRepository<Department> _repo;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public DepartmentController(IRepository<Department> repo)
+        public DepartmentController(IRepository<Department> repo, IUnitOfWork unitOfWork)
         {
             _repo = repo;
+            _unitOfWork = unitOfWork;
         }
 
         [HttpGet]
@@ -52,7 +54,7 @@ namespace Lab04.Controllers
 
         [HttpPost]
         [Route("add")]
-        public IActionResult Add(DepartmentDto departmentdto)
+        public async Task<IActionResult> Add(DepartmentDto departmentdto)
         {
             if (departmentdto == null)
                 return BadRequest();
@@ -65,27 +67,30 @@ namespace Lab04.Controllers
             };
 
             _repo.Add(dep);
+            await _unitOfWork.SaveChangesAsync();
             return CreatedAtAction(nameof(GetById), new { id = dep.Id }, dep);
         }
 
         [HttpPut]
         [Route("update")]
-        public IActionResult Update(Department department)
+        public async Task<IActionResult> Update(Department department)
         {
             if (department == null || _repo.GetById(department.Id) == null)
                 return BadRequest();
             _repo.Update(department);
+            await _unitOfWork.SaveChangesAsync();
             return Ok(department);
         }
 
         [HttpDelete]
         [Route("delete/{id:int}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
             var dep = _repo.GetById(id);
             if (dep == null)
                 return NotFound();
             _repo.Remove(dep);
+            await _unitOfWork.SaveChangesAsync();
             return Ok(dep);
         }
     }

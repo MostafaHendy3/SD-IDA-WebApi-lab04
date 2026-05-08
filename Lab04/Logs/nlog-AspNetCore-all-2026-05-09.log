@@ -1,0 +1,1200 @@
+2026-05-09 01:30:54.0610|0|DEBUG|Lab04.Program|init main 
+2026-05-09 01:30:55.1172|10401|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
+2026-05-09 01:30:56.4078|10601|DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'UserId'} was not created on entity type 'IdentityUserRole<string>' as the properties are already covered by the index {'UserId', 'RoleId'}. 
+2026-05-09 01:30:56.4078|10601|DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'UserId'} was not created on entity type 'IdentityUserToken<string>' as the properties are already covered by the index {'UserId', 'LoginProvider', 'Name'}. 
+2026-05-09 01:30:56.5574|10600|DEBUG|Microsoft.EntityFrameworkCore.Model.Validation|The property 'Student.DepartmentId' was created in shadow state because there are no eligible CLR members with a matching name. 
+2026-05-09 01:30:56.6696|10403|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 10.0.7 initialized 'UniDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:10.0.7' with options: EngineType=SqlServer  
+2026-05-09 01:30:56.7384|10111|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<IdentityRole>()
+    .FirstOrDefault(r => r.NormalizedName == @normalizedName)' 
+2026-05-09 01:30:57.0841|10107|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<IdentityRole>(
+    asyncEnumerable: SingleQueryingEnumerable.Create<IdentityRole>(
+        relationalQueryContext: (RelationalQueryContext)queryContext, 
+        relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IPropertyBase, int> { [Property: IdentityRole.Id (string) Required PK AfterSave:Throw, 0], [Property: IdentityRole.ConcurrencyStamp (string) Concurrency, 1], [Property: IdentityRole.Name (string) MaxLength(256), 2], [Property: IdentityRole.NormalizedName (string) Index MaxLength(256), 3] }
+            SELECT TOP(1) a.Id, a.ConcurrencyStamp, a.Name, a.NormalizedName
+            FROM AspNetRoles AS a
+            WHERE a.NormalizedName == @normalizedName) | Resolver: c => new RelationalCommandCache(
+            c.Dependencies.MemoryCache, 
+            c.RelationalDependencies.QuerySqlGeneratorFactory, 
+            c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IPropertyBase, int> { [Property: IdentityRole.Id (string) Required PK AfterSave:Throw, 0], [Property: IdentityRole.ConcurrencyStamp (string) Concurrency, 1], [Property: IdentityRole.Name (string) MaxLength(256), 2], [Property: IdentityRole.NormalizedName (string) Index MaxLength(256), 3] }
+            SELECT TOP(1) a.Id, a.ConcurrencyStamp, a.Name, a.NormalizedName
+            FROM AspNetRoles AS a
+            WHERE a.NormalizedName == @normalizedName, 
+            False, 
+            MultipleParameters
+        )].GetRelationalCommandTemplate(parameters), 
+        readerColumns: null, 
+        shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+        {
+            IdentityRole entity;
+            entity = 
+            {
+                MaterializationContext materializationContext1;
+                IEntityType entityType1;
+                IdentityRole instance1;
+                InternalEntityEntry entry1;
+                bool hasNullKey1;
+                materializationContext1 = new MaterializationContext(
+                    [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                    queryContext.Context
+                );
+                instance1 = default(IdentityRole);
+                entry1 = queryContext.TryGetEntry(
+                    key: [LIFTABLE Constant: Key: IdentityRole.Id PK | Resolver: c => c.Dependencies.Model.FindEntityType("Microsoft.AspNetCore.Identity.IdentityRole").FindPrimaryKey()], 
+                    keyValues: new object[]{ (object)dataReader.GetString(0) }, 
+                    throwOnNullKey: True, 
+                    hasNullKey: hasNullKey1);
+                !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+                {
+                    entityType1 = entry1.EntityType;
+                    return instance1 = (IdentityRole)entry1.Entity;
+                } : 
+                {
+                    ISnapshot shadowSnapshot1;
+                    shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                    entityType1 = [LIFTABLE Constant: EntityType: IdentityRole | Resolver: namelessParameter{0} => namelessParameter{0}.Dependencies.Model.FindEntityType("Microsoft.AspNetCore.Identity.IdentityRole")];
+                    instance1 = switch (entityType1)
+                    {
+                        case [LIFTABLE Constant: EntityType: IdentityRole | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType("Microsoft.AspNetCore.Identity.IdentityRole")]: 
+                            {
+                                return 
+                                {
+                                    IdentityRole instance;
+                                    instance = new IdentityRole();
+                                    instance.<Id>k__BackingField = dataReader.GetString(0);
+                                    instance.<ConcurrencyStamp>k__BackingField = dataReader.IsDBNull(1) ? default(string) : dataReader.GetString(1);
+                                    instance.<Name>k__BackingField = dataReader.IsDBNull(2) ? default(string) : dataReader.GetString(2);
+                                    instance.<NormalizedName>k__BackingField = dataReader.IsDBNull(3) ? default(string) : dataReader.GetString(3);
+                                    (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                        context: materializationContext1.Context, 
+                                        entity: instance, 
+                                        queryTrackingBehavior: TrackAll, 
+                                        structuralType: [LIFTABLE Constant: EntityType: IdentityRole | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType("Microsoft.AspNetCore.Identity.IdentityRole")]) : default(void);
+                                    return instance;
+                                }}
+                        default: 
+                            default(IdentityRole)
+                    }
+                    ;
+                    entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                        entityType: entityType1, 
+                        entity: instance1, 
+                        snapshot: shadowSnapshot1);
+                    return instance1;
+                } : default(void);
+                return instance1;
+            };
+            return entity;
+        }, 
+        contextType: Lab04.Models.UniDbContext, 
+        standAloneStateManager: False, 
+        detailedErrorsEnabled: False, 
+        threadSafetyChecksEnabled: True), 
+    cancellationToken: queryContext.CancellationToken)' 
+2026-05-09 01:30:57.1383|20005|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Creating DbConnection. 
+2026-05-09 01:30:57.1734|20006|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Created DbConnection. (30ms). 
+2026-05-09 01:30:57.1772|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:30:57.8190|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:30:57.8246|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2026-05-09 01:30:57.8246|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (5ms). 
+2026-05-09 01:30:57.8443|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (21ms). 
+2026-05-09 01:30:57.8540|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@normalizedName='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName 
+2026-05-09 01:30:58.0500|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (200ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName 
+2026-05-09 01:30:58.0658|20301|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:30:58.0739|20300|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'UniDb' on server 'JUSTSASA\SQLEXPRESS' is being disposed after spending 18ms reading results. 
+2026-05-09 01:30:58.0739|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:30:58.0739|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS' (6ms). 
+2026-05-09 01:30:58.0928|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:30:58.0928|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:30:58.0928|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2026-05-09 01:30:58.0928|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2026-05-09 01:30:58.0928|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2026-05-09 01:30:58.0928|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@normalizedName='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName 
+2026-05-09 01:30:58.0928|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName 
+2026-05-09 01:30:58.0928|20301|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:30:58.0928|20300|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'UniDb' on server 'JUSTSASA\SQLEXPRESS' is being disposed after spending 0ms reading results. 
+2026-05-09 01:30:58.0928|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:30:58.0928|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS' (0ms). 
+2026-05-09 01:30:58.1799|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'UniDbContext' started tracking 'IdentityRole' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2026-05-09 01:30:58.1852|10004|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges starting for 'UniDbContext'. 
+2026-05-09 01:30:58.1852|10800|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges starting for 'UniDbContext'. 
+2026-05-09 01:30:58.1988|10801|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges completed for 'UniDbContext'. 
+2026-05-09 01:30:58.2706|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:30:58.2706|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:30:58.2706|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2026-05-09 01:30:58.2706|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2026-05-09 01:30:58.2706|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2026-05-09 01:30:58.2706|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3); 
+2026-05-09 01:30:58.2885|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (15ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3); 
+2026-05-09 01:30:58.2885|20301|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:30:58.2885|20300|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'UniDb' on server 'JUSTSASA\SQLEXPRESS' is being disposed after spending 3ms reading results. 
+2026-05-09 01:30:58.2885|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:30:58.2885|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS' (0ms). 
+2026-05-09 01:30:58.3016|10807|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'IdentityRole' tracked by 'UniDbContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2026-05-09 01:30:58.3016|10005|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges completed for 'UniDbContext' with 1 entities written to the database. 
+2026-05-09 01:30:58.3016|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:30:58.3016|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:30:58.3016|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2026-05-09 01:30:58.3016|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2026-05-09 01:30:58.3016|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2026-05-09 01:30:58.3016|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@normalizedName='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName 
+2026-05-09 01:30:58.3184|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (13ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName 
+2026-05-09 01:30:58.3184|20301|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:30:58.3184|20300|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'UniDb' on server 'JUSTSASA\SQLEXPRESS' is being disposed after spending 0ms reading results. 
+2026-05-09 01:30:58.3184|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:30:58.3184|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS' (0ms). 
+2026-05-09 01:30:58.3184|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:30:58.3184|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:30:58.3184|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2026-05-09 01:30:58.3184|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2026-05-09 01:30:58.3184|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2026-05-09 01:30:58.3184|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@normalizedName='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName 
+2026-05-09 01:30:58.3184|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName 
+2026-05-09 01:30:58.3184|20301|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:30:58.3184|20300|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'UniDb' on server 'JUSTSASA\SQLEXPRESS' is being disposed after spending 0ms reading results. 
+2026-05-09 01:30:58.3184|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:30:58.3184|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS' (0ms). 
+2026-05-09 01:30:58.3184|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'UniDbContext' started tracking 'IdentityRole' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2026-05-09 01:30:58.3184|10004|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges starting for 'UniDbContext'. 
+2026-05-09 01:30:58.3184|10800|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges starting for 'UniDbContext'. 
+2026-05-09 01:30:58.3184|10801|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges completed for 'UniDbContext'. 
+2026-05-09 01:30:58.3184|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:30:58.3184|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:30:58.3184|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2026-05-09 01:30:58.3184|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2026-05-09 01:30:58.3184|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2026-05-09 01:30:58.3184|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3); 
+2026-05-09 01:30:58.3184|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3); 
+2026-05-09 01:30:58.3184|20301|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:30:58.3184|20300|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'UniDb' on server 'JUSTSASA\SQLEXPRESS' is being disposed after spending 0ms reading results. 
+2026-05-09 01:30:58.3184|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:30:58.3184|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS' (0ms). 
+2026-05-09 01:30:58.3184|10807|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'IdentityRole' tracked by 'UniDbContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2026-05-09 01:30:58.3184|10005|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges completed for 'UniDbContext' with 1 entities written to the database. 
+2026-05-09 01:30:58.3184|10407|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'UniDbContext' disposed. 
+2026-05-09 01:30:58.3289|20007|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposing connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:30:58.3289|20008|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposed connection to database '' on server '' (1ms). 
+2026-05-09 01:30:58.3815|12|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2026-05-09 01:30:58.4311|1|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2026-05-09 01:30:58.4418|63|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\mr hendy\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2026-05-09 01:30:58.4418|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\mr hendy\AppData\Local\ASP.NET\DataProtection-Keys\key-b69f919c-f721-49f5-8038-156d2cd38d91.xml'. 
+2026-05-09 01:30:58.4777|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {b69f919c-f721-49f5-8038-156d2cd38d91}. 
+2026-05-09 01:30:58.4938|13|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {b69f919c-f721-49f5-8038-156d2cd38d91} with expiration date 2026-07-08 08:47:01Z as default key. 
+2026-05-09 01:30:58.4938|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=10.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2026-05-09 01:30:58.4938|51|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
+2026-05-09 01:30:58.4938|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=10.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2026-05-09 01:30:58.4938|4|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2026-05-09 01:30:58.4938|3|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2026-05-09 01:30:58.4938|2|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {b69f919c-f721-49f5-8038-156d2cd38d91} as the default key. 
+2026-05-09 01:30:58.4938|65|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {b69f919c-f721-49f5-8038-156d2cd38d91} was loaded during application startup. 
+2026-05-09 01:30:58.5058|0|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BlazorWasmHotReloadMiddleware|Middleware loaded 
+2026-05-09 01:30:58.5344|0|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserScriptMiddleware|Middleware loaded. Script /_framework/aspnetcore-browser-refresh.js (14915 B). 
+2026-05-09 01:30:58.5344|0|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserScriptMiddleware|Middleware loaded. Script /_framework/blazor-hotreload.js (799 B). 
+2026-05-09 01:30:58.6391|7|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Middleware configuration started with options: {AllowedHosts = *, AllowEmptyHosts = True, IncludeFailureMessage = True} 
+2026-05-09 01:30:58.6391|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2026-05-09 01:30:58.6449|0|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Middleware loaded: DOTNET_MODIFIABLE_ASSEMBLIES=debug, __ASPNETCORE_BROWSER_TOOLS=true 
+2026-05-09 01:30:58.6689|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5279 
+2026-05-09 01:30:58.6689|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Lab04 
+2026-05-09 01:30:58.6689|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2026-05-09 01:30:58.6689|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery 
+2026-05-09 01:30:58.6689|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net 
+2026-05-09 01:30:58.6825|2|DEBUG|Microsoft.AspNetCore.Mvc.ApiExplorer.ApiDescriptionGroupCollectionProvider|Executing API description provider 'EndpointMetadataApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v10.0.0.0. 
+2026-05-09 01:30:58.6825|2|DEBUG|Microsoft.AspNetCore.Mvc.ApiExplorer.ApiDescriptionGroupCollectionProvider|Executing API description provider 'DefaultApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v10.0.0.0. 
+2026-05-09 01:30:58.7772|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLDA5T3K3G5" received FIN. 
+2026-05-09 01:30:58.7772|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3G5" accepted. 
+2026-05-09 01:30:58.7772|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3G5" started. 
+2026-05-09 01:30:58.7949|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLDA5T3K3G5" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2026-05-09 01:30:58.7949|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3G5" disconnecting. 
+2026-05-09 01:30:58.7949|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3G5" stopped. 
+2026-05-09 01:30:58.9127|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2026-05-09 01:30:58.9127|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2026-05-09 01:30:58.9135|0|INFO|Microsoft.Hosting.Lifetime|Content root path: E:\ITI\WebApi\lec01\Lab04 
+2026-05-09 01:30:58.9135|2|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2026-05-09 01:31:00.3234|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3G6" accepted. 
+2026-05-09 01:31:00.3234|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3G6" started. 
+2026-05-09 01:31:00.3545|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5279/swagger/index.html - - - 
+2026-05-09 01:31:00.4625|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-09 01:31:00.4893|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/index.html' 
+2026-05-09 01:31:00.4893|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2026-05-09 01:31:00.4893|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html 
+2026-05-09 01:31:00.6171|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3G6" completed keep alive response. 
+2026-05-09 01:31:00.6171|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5279/swagger/index.html - 304 - - 265.7641ms 
+2026-05-09 01:31:00.6454|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5279/swagger/swagger-ui.css - - - 
+2026-05-09 01:31:00.6454|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3G7" accepted. 
+2026-05-09 01:31:00.6454|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3G7" started. 
+2026-05-09 01:31:00.6454|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3G8" accepted. 
+2026-05-09 01:31:00.6454|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-09 01:31:00.6454|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3G8" started. 
+2026-05-09 01:31:00.6454|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5279/swagger/index.css - - - 
+2026-05-09 01:31:00.6454|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-09 01:31:00.6454|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3G9" accepted. 
+2026-05-09 01:31:00.6454|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3G9" started. 
+2026-05-09 01:31:00.6454|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/swagger-ui.css' 
+2026-05-09 01:31:00.6454|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/index.css' 
+2026-05-09 01:31:00.6454|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5279/swagger/swagger-ui-bundle.js - - - 
+2026-05-09 01:31:00.6454|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5279/swagger/swagger-ui-standalone-preset.js - - - 
+2026-05-09 01:31:00.6454|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-09 01:31:00.6454|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-09 01:31:00.6454|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/swagger-ui-bundle.js' 
+2026-05-09 01:31:00.6454|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js' 
+2026-05-09 01:31:00.6454|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2026-05-09 01:31:00.6454|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2026-05-09 01:31:00.6454|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js 
+2026-05-09 01:31:00.6454|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css 
+2026-05-09 01:31:00.6454|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2026-05-09 01:31:00.6454|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2026-05-09 01:31:00.6454|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js 
+2026-05-09 01:31:00.6454|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3GA" accepted. 
+2026-05-09 01:31:00.6454|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css 
+2026-05-09 01:31:00.6454|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3GA" started. 
+2026-05-09 01:31:00.6454|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3GB" accepted. 
+2026-05-09 01:31:00.6454|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3GB" started. 
+2026-05-09 01:31:00.6454|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - - - 
+2026-05-09 01:31:00.6454|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5279/swagger/index.js - - - 
+2026-05-09 01:31:00.6454|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-09 01:31:00.6454|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/index.js' 
+2026-05-09 01:31:00.6454|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2026-05-09 01:31:00.6454|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js 
+2026-05-09 01:31:00.6454|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3GB" completed keep alive response. 
+2026-05-09 01:31:00.6454|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5279/swagger/index.js - 304 - - 2.7686ms 
+2026-05-09 01:31:00.6454|0|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserScriptMiddleware|Script injected: /_framework/aspnetcore-browser-refresh.js 
+2026-05-09 01:31:00.6454|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3GA" completed keep alive response. 
+2026-05-09 01:31:00.6454|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - 200 14915 application/javascript;+charset=utf-8 3.3187ms 
+2026-05-09 01:31:00.6605|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3G7" completed keep alive response. 
+2026-05-09 01:31:00.6605|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5279/swagger/index.css - 304 - - 13.7731ms 
+2026-05-09 01:31:00.6913|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3G6" completed keep alive response. 
+2026-05-09 01:31:00.6913|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5279/swagger/swagger-ui.css - 304 - - 46.0272ms 
+2026-05-09 01:31:00.6913|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3G9" completed keep alive response. 
+2026-05-09 01:31:00.6913|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5279/swagger/swagger-ui-standalone-preset.js - 304 - - 45.2253ms 
+2026-05-09 01:31:00.7004|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5279/_vs/browserLink - - - 
+2026-05-09 01:31:00.7004|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3G8" completed keep alive response. 
+2026-05-09 01:31:00.7004|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5279/swagger/swagger-ui-bundle.js - 304 - - 59.4037ms 
+2026-05-09 01:31:00.7459|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3G9" completed keep alive response. 
+2026-05-09 01:31:00.7459|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5279/_vs/browserLink - 200 - text/javascript;+charset=UTF-8 45.6204ms 
+2026-05-09 01:31:00.8562|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - - - 
+2026-05-09 01:31:00.8562|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-09 01:31:00.8562|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/v1/swagger.json' 
+2026-05-09 01:31:00.8562|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2026-05-09 01:31:00.8562|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json 
+2026-05-09 01:31:00.9400|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3G9" completed keep alive response. 
+2026-05-09 01:31:00.9400|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 83.8578ms 
+2026-05-09 01:31:44.3779|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3GC" accepted. 
+2026-05-09 01:31:44.3779|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3GC" started. 
+2026-05-09 01:31:44.3779|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3GD" accepted. 
+2026-05-09 01:31:44.3779|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3GD" started. 
+2026-05-09 01:31:44.3779|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLDA5T3K3GC" received FIN. 
+2026-05-09 01:31:44.3779|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLDA5T3K3GC" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2026-05-09 01:31:44.3779|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3GC" disconnecting. 
+2026-05-09 01:31:44.3779|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5279/api/register - application/json 148 
+2026-05-09 01:31:44.3856|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-09 01:31:44.3856|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/api/register' 
+2026-05-09 01:31:44.3856|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2026-05-09 01:31:44.3856|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: POST /api/register 
+2026-05-09 01:31:44.3856|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3GC" stopped. 
+2026-05-09 01:31:46.6007|9|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2026-05-09 01:31:46.6007|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3GD" completed keep alive response. 
+2026-05-09 01:31:46.6007|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5279/api/register - 404 0 - 2217.4719ms 
+2026-05-09 01:31:46.6043|16|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5279/api/register, Response status code: 404 
+2026-05-09 01:31:46.6043|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HNLDA5T3K3GD", Request id "0HNLDA5T3K3GD:00000001": started reading request body. 
+2026-05-09 01:31:46.6043|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HNLDA5T3K3GD", Request id "0HNLDA5T3K3GD:00000001": done reading request body. 
+2026-05-09 01:31:53.2977|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5279/api/register - application/json 149 
+2026-05-09 01:31:53.2977|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-09 01:31:53.2977|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/api/register' 
+2026-05-09 01:31:53.2977|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2026-05-09 01:31:53.2977|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: POST /api/register 
+2026-05-09 01:31:53.2977|9|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2026-05-09 01:31:53.2977|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3GD" completed keep alive response. 
+2026-05-09 01:31:53.2977|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5279/api/register - 404 0 - 3.0688ms 
+2026-05-09 01:31:53.2977|16|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5279/api/register, Response status code: 404 
+2026-05-09 01:31:53.2977|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HNLDA5T3K3GD", Request id "0HNLDA5T3K3GD:00000002": started reading request body. 
+2026-05-09 01:31:53.2977|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HNLDA5T3K3GD", Request id "0HNLDA5T3K3GD:00000002": done reading request body. 
+2026-05-09 01:32:14.3770|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5279/api/Account/register - application/json 143 
+2026-05-09 01:32:14.3770|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-09 01:32:14.3873|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/Account/register' 
+2026-05-09 01:32:14.3873|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Lab04.Controllers.AccountController.Register (Lab04)' with route pattern 'api/Account/register' is valid for the request path '/api/Account/register' 
+2026-05-09 01:32:14.3873|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Lab04.Controllers.AccountController.Register (Lab04)' 
+2026-05-09 01:32:14.3873|8|TRACE|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|The endpoint does not specify the IRequestSizeLimitMetadata. 
+2026-05-09 01:32:14.3873|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: POST /api/Account/register 
+2026-05-09 01:32:14.3873|9|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2026-05-09 01:32:14.3873|10|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware|No CORS policy found for the specified request. 
+2026-05-09 01:32:14.3873|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Lab04.Controllers.AccountController.Register (Lab04)' 
+2026-05-09 01:32:14.4414|102|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Lab04.Models.DTOs.RegisterDTO) on controller Lab04.Controllers.AccountController (Lab04). 
+2026-05-09 01:32:14.4414|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2026-05-09 01:32:14.4414|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2026-05-09 01:32:14.4414|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2026-05-09 01:32:14.4414|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): Lab04.Filters.ExceptionFilter 
+2026-05-09 01:32:14.4414|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000), Lab04.Filters.ResultFilter 
+2026-05-09 01:32:14.4467|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Lab04.Controllers.AccountController (Lab04) 
+2026-05-09 01:32:14.4832|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Lab04.Controllers.AccountController (Lab04) 
+2026-05-09 01:32:14.4918|22|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'request' of type 'Lab04.Models.DTOs.RegisterDTO' ... 
+2026-05-09 01:32:14.4918|44|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'request' of type 'Lab04.Models.DTOs.RegisterDTO' using the name '' in request data ... 
+2026-05-09 01:32:14.4918|1|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2026-05-09 01:32:14.5074|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HNLDA5T3K3G9", Request id "0HNLDA5T3K3G9:00000004": started reading request body. 
+2026-05-09 01:32:14.5074|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HNLDA5T3K3G9", Request id "0HNLDA5T3K3G9:00000004": done reading request body. 
+2026-05-09 01:32:14.5229|2|DEBUG|Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter|JSON input formatter succeeded, deserializing to type 'Lab04.Models.DTOs.RegisterDTO' 
+2026-05-09 01:32:14.5229|45|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'request' of type 'Lab04.Models.DTOs.RegisterDTO'. 
+2026-05-09 01:32:14.5229|23|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'request' of type 'Lab04.Models.DTOs.RegisterDTO'. 
+2026-05-09 01:32:14.5229|26|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'request' of type 'Lab04.Models.DTOs.RegisterDTO' ... 
+2026-05-09 01:32:14.5229|27|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'request' of type 'Lab04.Models.DTOs.RegisterDTO'. 
+2026-05-09 01:32:14.5229|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2026-05-09 01:32:14.5229|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2026-05-09 01:32:14.5229|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2026-05-09 01:32:14.5229|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2026-05-09 01:32:14.5409|101|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Lab04.Controllers.AccountController.Register (Lab04) - Validation state: Valid 
+2026-05-09 01:32:14.5409|102|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Lab04.Controllers.AccountController.Register (Lab04) with arguments (Lab04.Models.DTOs.RegisterDTO) 
+2026-05-09 01:32:14.7871|10403|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 10.0.7 initialized 'UniDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:10.0.7' with options: EngineType=SqlServer  
+2026-05-09 01:32:14.7871|10111|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<ApplicationUser>()
+    .FirstOrDefault(u => u.NormalizedUserName == @normalizedUserName)' 
+2026-05-09 01:32:14.7871|10107|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<ApplicationUser>(
+    asyncEnumerable: SingleQueryingEnumerable.Create<ApplicationUser>(
+        relationalQueryContext: (RelationalQueryContext)queryContext, 
+        relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IPropertyBase, int> { [Property: ApplicationUser.Id (string) Required PK AfterSave:Throw, 0], [Property: ApplicationUser.AccessFailedCount (int) Required, 1], [Property: ApplicationUser.Address (string), 2], [Property: ApplicationUser.ConcurrencyStamp (string) Concurrency, 3], [Property: ApplicationUser.Email (string) MaxLength(256), 4], [Property: ApplicationUser.EmailConfirmed (bool) Required, 5], [Property: ApplicationUser.LockoutEnabled (bool) Required, 6], [Property: ApplicationUser.LockoutEnd (DateTimeOffset?), 7], [Property: ApplicationUser.NormalizedEmail (string) Index MaxLength(256), 8], [Property: ApplicationUser.NormalizedUserName (string) Index MaxLength(256), 9], [Property: ApplicationUser.PasswordHash (string), 10], [Property: ApplicationUser.PhoneNumber (string), 11], [Property: ApplicationUser.PhoneNumberConfirmed (bool) Required, 12], [Property: ApplicationUser.SecurityStamp (string), 13], [Property: ApplicationUser.TwoFactorEnabled (bool) Required, 14], [Property: ApplicationUser.UserName (string) MaxLength(256), 15] }
+            SELECT TOP(1) a.Id, a.AccessFailedCount, a.Address, a.ConcurrencyStamp, a.Email, a.EmailConfirmed, a.LockoutEnabled, a.LockoutEnd, a.NormalizedEmail, a.NormalizedUserName, a.PasswordHash, a.PhoneNumber, a.PhoneNumberConfirmed, a.SecurityStamp, a.TwoFactorEnabled, a.UserName
+            FROM AspNetUsers AS a
+            WHERE a.NormalizedUserName == @normalizedUserName) | Resolver: c => new RelationalCommandCache(
+            c.Dependencies.MemoryCache, 
+            c.RelationalDependencies.QuerySqlGeneratorFactory, 
+            c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IPropertyBase, int> { [Property: ApplicationUser.Id (string) Required PK AfterSave:Throw, 0], [Property: ApplicationUser.AccessFailedCount (int) Required, 1], [Property: ApplicationUser.Address (string), 2], [Property: ApplicationUser.ConcurrencyStamp (string) Concurrency, 3], [Property: ApplicationUser.Email (string) MaxLength(256), 4], [Property: ApplicationUser.EmailConfirmed (bool) Required, 5], [Property: ApplicationUser.LockoutEnabled (bool) Required, 6], [Property: ApplicationUser.LockoutEnd (DateTimeOffset?), 7], [Property: ApplicationUser.NormalizedEmail (string) Index MaxLength(256), 8], [Property: ApplicationUser.NormalizedUserName (string) Index MaxLength(256), 9], [Property: ApplicationUser.PasswordHash (string), 10], [Property: ApplicationUser.PhoneNumber (string), 11], [Property: ApplicationUser.PhoneNumberConfirmed (bool) Required, 12], [Property: ApplicationUser.SecurityStamp (string), 13], [Property: ApplicationUser.TwoFactorEnabled (bool) Required, 14], [Property: ApplicationUser.UserName (string) MaxLength(256), 15] }
+            SELECT TOP(1) a.Id, a.AccessFailedCount, a.Address, a.ConcurrencyStamp, a.Email, a.EmailConfirmed, a.LockoutEnabled, a.LockoutEnd, a.NormalizedEmail, a.NormalizedUserName, a.PasswordHash, a.PhoneNumber, a.PhoneNumberConfirmed, a.SecurityStamp, a.TwoFactorEnabled, a.UserName
+            FROM AspNetUsers AS a
+            WHERE a.NormalizedUserName == @normalizedUserName, 
+            False, 
+            MultipleParameters
+        )].GetRelationalCommandTemplate(parameters), 
+        readerColumns: null, 
+        shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+        {
+            ApplicationUser entity;
+            entity = 
+            {
+                MaterializationContext materializationContext1;
+                IEntityType entityType1;
+                ApplicationUser instance1;
+                InternalEntityEntry entry1;
+                bool hasNullKey1;
+                materializationContext1 = new MaterializationContext(
+                    [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                    queryContext.Context
+                );
+                instance1 = default(ApplicationUser);
+                entry1 = queryContext.TryGetEntry(
+                    key: [LIFTABLE Constant: Key: ApplicationUser.Id PK | Resolver: c => c.Dependencies.Model.FindEntityType("Lab04.Models.ApplicationUser").FindPrimaryKey()], 
+                    keyValues: new object[]{ (object)dataReader.GetString(0) }, 
+                    throwOnNullKey: True, 
+                    hasNullKey: hasNullKey1);
+                !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+                {
+                    entityType1 = entry1.EntityType;
+                    return instance1 = (ApplicationUser)entry1.Entity;
+                } : 
+                {
+                    ISnapshot shadowSnapshot1;
+                    shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                    entityType1 = [LIFTABLE Constant: EntityType: ApplicationUser | Resolver: namelessParameter{0} => namelessParameter{0}.Dependencies.Model.FindEntityType("Lab04.Models.ApplicationUser")];
+                    instance1 = switch (entityType1)
+                    {
+                        case [LIFTABLE Constant: EntityType: ApplicationUser | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType("Lab04.Models.ApplicationUser")]: 
+                            {
+                                return 
+                                {
+                                    ApplicationUser instance;
+                                    instance = new ApplicationUser();
+                                    instance.<Id>k__BackingField = dataReader.GetString(0);
+                                    instance.<AccessFailedCount>k__BackingField = dataReader.GetInt32(1);
+                                    instance.<Address>k__BackingField = dataReader.IsDBNull(2) ? default(string) : dataReader.GetString(2);
+                                    instance.<ConcurrencyStamp>k__BackingField = dataReader.IsDBNull(3) ? default(string) : dataReader.GetString(3);
+                                    instance.<Email>k__BackingField = dataReader.IsDBNull(4) ? default(string) : dataReader.GetString(4);
+                                    instance.<EmailConfirmed>k__BackingField = dataReader.GetBoolean(5);
+                                    instance.<LockoutEnabled>k__BackingField = dataReader.GetBoolean(6);
+                                    instance.<LockoutEnd>k__BackingField = dataReader.IsDBNull(7) ? default(DateTimeOffset?) : (DateTimeOffset?)dataReader.GetFieldValue<DateTimeOffset>(7);
+                                    instance.<NormalizedEmail>k__BackingField = dataReader.IsDBNull(8) ? default(string) : dataReader.GetString(8);
+                                    instance.<NormalizedUserName>k__BackingField = dataReader.IsDBNull(9) ? default(string) : dataReader.GetString(9);
+                                    instance.<PasswordHash>k__BackingField = dataReader.IsDBNull(10) ? default(string) : dataReader.GetString(10);
+                                    instance.<PhoneNumber>k__BackingField = dataReader.IsDBNull(11) ? default(string) : dataReader.GetString(11);
+                                    instance.<PhoneNumberConfirmed>k__BackingField = dataReader.GetBoolean(12);
+                                    instance.<SecurityStamp>k__BackingField = dataReader.IsDBNull(13) ? default(string) : dataReader.GetString(13);
+                                    instance.<TwoFactorEnabled>k__BackingField = dataReader.GetBoolean(14);
+                                    instance.<UserName>k__BackingField = dataReader.IsDBNull(15) ? default(string) : dataReader.GetString(15);
+                                    (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                        context: materializationContext1.Context, 
+                                        entity: instance, 
+                                        queryTrackingBehavior: TrackAll, 
+                                        structuralType: [LIFTABLE Constant: EntityType: ApplicationUser | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType("Lab04.Models.ApplicationUser")]) : default(void);
+                                    return instance;
+                                }}
+                        default: 
+                            default(ApplicationUser)
+                    }
+                    ;
+                    entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                        entityType: entityType1, 
+                        entity: instance1, 
+                        snapshot: shadowSnapshot1);
+                    return instance1;
+                } : default(void);
+                return instance1;
+            };
+            return entity;
+        }, 
+        contextType: Lab04.Models.UniDbContext, 
+        standAloneStateManager: False, 
+        detailedErrorsEnabled: False, 
+        threadSafetyChecksEnabled: True), 
+    cancellationToken: queryContext.CancellationToken)' 
+2026-05-09 01:32:14.7871|20005|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Creating DbConnection. 
+2026-05-09 01:32:14.7871|20006|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Created DbConnection. (0ms). 
+2026-05-09 01:32:14.7871|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:14.7871|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:14.7871|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2026-05-09 01:32:14.7871|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2026-05-09 01:32:14.7871|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2026-05-09 01:32:14.7871|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @normalizedUserName 
+2026-05-09 01:32:14.8179|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (18ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @normalizedUserName 
+2026-05-09 01:32:14.8179|20301|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:14.8179|20300|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'UniDb' on server 'JUSTSASA\SQLEXPRESS' is being disposed after spending 0ms reading results. 
+2026-05-09 01:32:14.8179|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:14.8179|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS' (0ms). 
+2026-05-09 01:32:14.9013|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'UniDbContext' started tracking 'ApplicationUser' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2026-05-09 01:32:14.9013|10004|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges starting for 'UniDbContext'. 
+2026-05-09 01:32:14.9013|10800|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges starting for 'UniDbContext'. 
+2026-05-09 01:32:14.9210|10801|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges completed for 'UniDbContext'. 
+2026-05-09 01:32:14.9210|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:14.9210|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:14.9210|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2026-05-09 01:32:14.9210|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2026-05-09 01:32:14.9210|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2026-05-09 01:32:14.9210|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15); 
+2026-05-09 01:32:14.9366|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (13ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15); 
+2026-05-09 01:32:14.9366|20301|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:14.9366|20300|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'UniDb' on server 'JUSTSASA\SQLEXPRESS' is being disposed after spending 0ms reading results. 
+2026-05-09 01:32:14.9366|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:14.9366|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS' (0ms). 
+2026-05-09 01:32:14.9366|10807|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'ApplicationUser' tracked by 'UniDbContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2026-05-09 01:32:14.9366|10005|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges completed for 'UniDbContext' with 1 entities written to the database. 
+2026-05-09 01:32:14.9366|10111|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<IdentityRole>()
+    .SingleOrDefault(r => r.NormalizedName == @normalizedRoleName)' 
+2026-05-09 01:32:14.9366|10107|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<IdentityRole>(
+    asyncEnumerable: SingleQueryingEnumerable.Create<IdentityRole>(
+        relationalQueryContext: (RelationalQueryContext)queryContext, 
+        relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IPropertyBase, int> { [Property: IdentityRole.Id (string) Required PK AfterSave:Throw, 0], [Property: IdentityRole.ConcurrencyStamp (string) Concurrency, 1], [Property: IdentityRole.Name (string) MaxLength(256), 2], [Property: IdentityRole.NormalizedName (string) Index MaxLength(256), 3] }
+            SELECT TOP(2) a.Id, a.ConcurrencyStamp, a.Name, a.NormalizedName
+            FROM AspNetRoles AS a
+            WHERE a.NormalizedName == @normalizedRoleName) | Resolver: c => new RelationalCommandCache(
+            c.Dependencies.MemoryCache, 
+            c.RelationalDependencies.QuerySqlGeneratorFactory, 
+            c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IPropertyBase, int> { [Property: IdentityRole.Id (string) Required PK AfterSave:Throw, 0], [Property: IdentityRole.ConcurrencyStamp (string) Concurrency, 1], [Property: IdentityRole.Name (string) MaxLength(256), 2], [Property: IdentityRole.NormalizedName (string) Index MaxLength(256), 3] }
+            SELECT TOP(2) a.Id, a.ConcurrencyStamp, a.Name, a.NormalizedName
+            FROM AspNetRoles AS a
+            WHERE a.NormalizedName == @normalizedRoleName, 
+            False, 
+            MultipleParameters
+        )].GetRelationalCommandTemplate(parameters), 
+        readerColumns: null, 
+        shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+        {
+            IdentityRole entity;
+            entity = 
+            {
+                MaterializationContext materializationContext1;
+                IEntityType entityType1;
+                IdentityRole instance1;
+                InternalEntityEntry entry1;
+                bool hasNullKey1;
+                materializationContext1 = new MaterializationContext(
+                    [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                    queryContext.Context
+                );
+                instance1 = default(IdentityRole);
+                entry1 = queryContext.TryGetEntry(
+                    key: [LIFTABLE Constant: Key: IdentityRole.Id PK | Resolver: c => c.Dependencies.Model.FindEntityType("Microsoft.AspNetCore.Identity.IdentityRole").FindPrimaryKey()], 
+                    keyValues: new object[]{ (object)dataReader.GetString(0) }, 
+                    throwOnNullKey: True, 
+                    hasNullKey: hasNullKey1);
+                !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+                {
+                    entityType1 = entry1.EntityType;
+                    return instance1 = (IdentityRole)entry1.Entity;
+                } : 
+                {
+                    ISnapshot shadowSnapshot1;
+                    shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                    entityType1 = [LIFTABLE Constant: EntityType: IdentityRole | Resolver: namelessParameter{0} => namelessParameter{0}.Dependencies.Model.FindEntityType("Microsoft.AspNetCore.Identity.IdentityRole")];
+                    instance1 = switch (entityType1)
+                    {
+                        case [LIFTABLE Constant: EntityType: IdentityRole | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType("Microsoft.AspNetCore.Identity.IdentityRole")]: 
+                            {
+                                return 
+                                {
+                                    IdentityRole instance;
+                                    instance = new IdentityRole();
+                                    instance.<Id>k__BackingField = dataReader.GetString(0);
+                                    instance.<ConcurrencyStamp>k__BackingField = dataReader.IsDBNull(1) ? default(string) : dataReader.GetString(1);
+                                    instance.<Name>k__BackingField = dataReader.IsDBNull(2) ? default(string) : dataReader.GetString(2);
+                                    instance.<NormalizedName>k__BackingField = dataReader.IsDBNull(3) ? default(string) : dataReader.GetString(3);
+                                    (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                        context: materializationContext1.Context, 
+                                        entity: instance, 
+                                        queryTrackingBehavior: TrackAll, 
+                                        structuralType: [LIFTABLE Constant: EntityType: IdentityRole | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType("Microsoft.AspNetCore.Identity.IdentityRole")]) : default(void);
+                                    return instance;
+                                }}
+                        default: 
+                            default(IdentityRole)
+                    }
+                    ;
+                    entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                        entityType: entityType1, 
+                        entity: instance1, 
+                        snapshot: shadowSnapshot1);
+                    return instance1;
+                } : default(void);
+                return instance1;
+            };
+            return entity;
+        }, 
+        contextType: Lab04.Models.UniDbContext, 
+        standAloneStateManager: False, 
+        detailedErrorsEnabled: False, 
+        threadSafetyChecksEnabled: True), 
+    cancellationToken: queryContext.CancellationToken)' 
+2026-05-09 01:32:14.9366|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:14.9366|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:14.9366|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2026-05-09 01:32:14.9366|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2026-05-09 01:32:14.9366|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2026-05-09 01:32:14.9366|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@normalizedRoleName='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedRoleName 
+2026-05-09 01:32:14.9538|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[@normalizedRoleName='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedRoleName 
+2026-05-09 01:32:14.9538|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'UniDbContext' started tracking 'IdentityRole' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2026-05-09 01:32:14.9538|20301|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:14.9538|20300|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'UniDb' on server 'JUSTSASA\SQLEXPRESS' is being disposed after spending 13ms reading results. 
+2026-05-09 01:32:14.9538|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:14.9538|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS' (0ms). 
+2026-05-09 01:32:14.9864|10111|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<IdentityUserRole<string>>()
+    .FirstOrDefault(e => EF.Property<string>(e, "UserId") == @p && EF.Property<string>(e, "RoleId") == @p1)' 
+2026-05-09 01:32:15.0454|10107|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<IdentityUserRole<string>>(
+    asyncEnumerable: SingleQueryingEnumerable.Create<IdentityUserRole<string>>(
+        relationalQueryContext: (RelationalQueryContext)queryContext, 
+        relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IPropertyBase, int> { [Property: IdentityUserRole<string>.UserId (string) Required PK FK AfterSave:Throw, 0], [Property: IdentityUserRole<string>.RoleId (string) Required PK FK Index AfterSave:Throw, 1] }
+            SELECT TOP(1) a.UserId, a.RoleId
+            FROM AspNetUserRoles AS a
+            WHERE (a.UserId == @p) && (a.RoleId == @p1)) | Resolver: c => new RelationalCommandCache(
+            c.Dependencies.MemoryCache, 
+            c.RelationalDependencies.QuerySqlGeneratorFactory, 
+            c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IPropertyBase, int> { [Property: IdentityUserRole<string>.UserId (string) Required PK FK AfterSave:Throw, 0], [Property: IdentityUserRole<string>.RoleId (string) Required PK FK Index AfterSave:Throw, 1] }
+            SELECT TOP(1) a.UserId, a.RoleId
+            FROM AspNetUserRoles AS a
+            WHERE (a.UserId == @p) && (a.RoleId == @p1), 
+            False, 
+            MultipleParameters
+        )].GetRelationalCommandTemplate(parameters), 
+        readerColumns: null, 
+        shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+        {
+            IdentityUserRole<string> entity;
+            entity = 
+            {
+                MaterializationContext materializationContext1;
+                IEntityType entityType1;
+                IdentityUserRole<string> instance1;
+                InternalEntityEntry entry1;
+                bool hasNullKey1;
+                materializationContext1 = new MaterializationContext(
+                    [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                    queryContext.Context
+                );
+                instance1 = default(IdentityUserRole<string>);
+                entry1 = queryContext.TryGetEntry(
+                    key: [LIFTABLE Constant: Key: IdentityUserRole<string>.UserId, IdentityUserRole<string>.RoleId PK | Resolver: c => c.Dependencies.Model.FindEntityType("Microsoft.AspNetCore.Identity.IdentityUserRole<string>").FindPrimaryKey()], 
+                    keyValues: new object[]
+                    { 
+                        (object)dataReader.GetString(0), 
+                        (object)dataReader.GetString(1) 
+                    }, 
+                    throwOnNullKey: True, 
+                    hasNullKey: hasNullKey1);
+                !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+                {
+                    entityType1 = entry1.EntityType;
+                    return instance1 = (IdentityUserRole<string>)entry1.Entity;
+                } : 
+                {
+                    ISnapshot shadowSnapshot1;
+                    shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                    entityType1 = [LIFTABLE Constant: EntityType: IdentityUserRole<string> | Resolver: namelessParameter{0} => namelessParameter{0}.Dependencies.Model.FindEntityType("Microsoft.AspNetCore.Identity.IdentityUserRole<string>")];
+                    instance1 = switch (entityType1)
+                    {
+                        case [LIFTABLE Constant: EntityType: IdentityUserRole<string> | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType("Microsoft.AspNetCore.Identity.IdentityUserRole<string>")]: 
+                            {
+                                return 
+                                {
+                                    IdentityUserRole<string> instance;
+                                    instance = new IdentityUserRole<string>();
+                                    instance.<UserId>k__BackingField = dataReader.GetString(0);
+                                    instance.<RoleId>k__BackingField = dataReader.GetString(1);
+                                    (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                        context: materializationContext1.Context, 
+                                        entity: instance, 
+                                        queryTrackingBehavior: TrackAll, 
+                                        structuralType: [LIFTABLE Constant: EntityType: IdentityUserRole<string> | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType("Microsoft.AspNetCore.Identity.IdentityUserRole<string>")]) : default(void);
+                                    return instance;
+                                }}
+                        default: 
+                            default(IdentityUserRole<string>)
+                    }
+                    ;
+                    entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                        entityType: entityType1, 
+                        entity: instance1, 
+                        snapshot: shadowSnapshot1);
+                    return instance1;
+                } : default(void);
+                return instance1;
+            };
+            return entity;
+        }, 
+        contextType: Lab04.Models.UniDbContext, 
+        standAloneStateManager: False, 
+        detailedErrorsEnabled: False, 
+        threadSafetyChecksEnabled: True), 
+    cancellationToken: queryContext.CancellationToken)' 
+2026-05-09 01:32:15.0454|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:15.0454|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:15.0454|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2026-05-09 01:32:15.0454|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2026-05-09 01:32:15.0454|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2026-05-09 01:32:15.0454|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@p='?' (Size = 450), @p1='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @p AND [a].[RoleId] = @p1 
+2026-05-09 01:32:15.0454|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[@p='?' (Size = 450), @p1='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @p AND [a].[RoleId] = @p1 
+2026-05-09 01:32:15.0454|20301|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:15.0454|20300|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'UniDb' on server 'JUSTSASA\SQLEXPRESS' is being disposed after spending 0ms reading results. 
+2026-05-09 01:32:15.0454|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:15.0454|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS' (0ms). 
+2026-05-09 01:32:15.0602|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:15.0602|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:15.0602|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2026-05-09 01:32:15.0602|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2026-05-09 01:32:15.0602|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2026-05-09 01:32:15.0602|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@normalizedRoleName='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedRoleName 
+2026-05-09 01:32:15.0602|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@normalizedRoleName='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedRoleName 
+2026-05-09 01:32:15.0602|20301|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:15.0602|20300|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'UniDb' on server 'JUSTSASA\SQLEXPRESS' is being disposed after spending 0ms reading results. 
+2026-05-09 01:32:15.0602|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:15.0602|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS' (0ms). 
+2026-05-09 01:32:15.0799|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'UniDbContext' started tracking 'IdentityUserRole' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2026-05-09 01:32:15.0799|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:15.0799|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:15.0799|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2026-05-09 01:32:15.0799|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2026-05-09 01:32:15.0799|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2026-05-09 01:32:15.0799|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @normalizedUserName 
+2026-05-09 01:32:15.0799|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @normalizedUserName 
+2026-05-09 01:32:15.0799|20301|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:15.0799|20300|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'UniDb' on server 'JUSTSASA\SQLEXPRESS' is being disposed after spending 2ms reading results. 
+2026-05-09 01:32:15.0799|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:15.0799|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS' (0ms). 
+2026-05-09 01:32:15.0919|10807|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'ApplicationUser' tracked by 'UniDbContext' changed state from 'Unchanged' to 'Modified'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2026-05-09 01:32:15.0919|10004|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges starting for 'UniDbContext'. 
+2026-05-09 01:32:15.0919|10800|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges starting for 'UniDbContext'. 
+2026-05-09 01:32:15.0919|10801|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges completed for 'UniDbContext'. 
+2026-05-09 01:32:15.1177|20700|DEBUG|Microsoft.EntityFrameworkCore.Update|Executing 2 update commands as a batch. 
+2026-05-09 01:32:15.1199|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:15.1199|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:15.1199|20209|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Beginning transaction with isolation level 'Unspecified'. 
+2026-05-09 01:32:15.1199|20200|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Began transaction with isolation level 'ReadCommitted'. 
+2026-05-09 01:32:15.1199|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2026-05-09 01:32:15.1199|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2026-05-09 01:32:15.1199|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (1ms). 
+2026-05-09 01:32:15.1199|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p17='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p18='?' (Size = 4000), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (Size = 256), @p10='?' (Size = 256), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [Address] = @p3, [ConcurrencyStamp] = @p4, [Email] = @p5, [EmailConfirmed] = @p6, [LockoutEnabled] = @p7, [LockoutEnd] = @p8, [NormalizedEmail] = @p9, [NormalizedUserName] = @p10, [PasswordHash] = @p11, [PhoneNumber] = @p12, [PhoneNumberConfirmed] = @p13, [SecurityStamp] = @p14, [TwoFactorEnabled] = @p15, [UserName] = @p16
+OUTPUT 1
+WHERE [Id] = @p17 AND [ConcurrencyStamp] = @p18; 
+2026-05-09 01:32:15.1545|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (21ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p17='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p18='?' (Size = 4000), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (Size = 256), @p10='?' (Size = 256), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [Address] = @p3, [ConcurrencyStamp] = @p4, [Email] = @p5, [EmailConfirmed] = @p6, [LockoutEnabled] = @p7, [LockoutEnd] = @p8, [NormalizedEmail] = @p9, [NormalizedUserName] = @p10, [PasswordHash] = @p11, [PhoneNumber] = @p12, [PhoneNumberConfirmed] = @p13, [SecurityStamp] = @p14, [TwoFactorEnabled] = @p15, [UserName] = @p16
+OUTPUT 1
+WHERE [Id] = @p17 AND [ConcurrencyStamp] = @p18; 
+2026-05-09 01:32:15.1545|20301|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:15.1545|20300|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'UniDb' on server 'JUSTSASA\SQLEXPRESS' is being disposed after spending 3ms reading results. 
+2026-05-09 01:32:15.1545|20210|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committing transaction. 
+2026-05-09 01:32:15.1545|20202|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committed transaction. 
+2026-05-09 01:32:15.1679|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:15.1679|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS' (0ms). 
+2026-05-09 01:32:15.1679|20204|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Disposing transaction. 
+2026-05-09 01:32:15.1679|10807|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'IdentityUserRole' tracked by 'UniDbContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2026-05-09 01:32:15.1679|10807|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'ApplicationUser' tracked by 'UniDbContext' changed state from 'Modified' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2026-05-09 01:32:15.1679|10005|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges completed for 'UniDbContext' with 2 entities written to the database. 
+2026-05-09 01:32:15.1679|103|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Lab04.Controllers.AccountController.Register (Lab04), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 632.7134ms. 
+2026-05-09 01:32:15.1679|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2026-05-09 01:32:15.1679|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2026-05-09 01:32:15.1679|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2026-05-09 01:32:15.1679|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2026-05-09 01:32:15.1850|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2026-05-09 01:32:15.1850|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2026-05-09 01:32:15.1850|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Lab04.Filters.ResultFilter. 
+2026-05-09 01:32:15.1850|0|INFO|Lab04.Filters.ResultFilter|OnResultExecuting: Header: server-time: 5/9/2026 1:32:15 AM 
+2026-05-09 01:32:15.1850|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Lab04.Filters.ResultFilter. 
+2026-05-09 01:32:15.1850|5|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2026-05-09 01:32:15.1850|11|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2026-05-09 01:32:15.1850|4|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2026-05-09 01:32:15.1850|8|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2026-05-09 01:32:15.1850|10|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2026-05-09 01:32:15.1850|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response. 
+2026-05-09 01:32:15.1850|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2026-05-09 01:32:15.2045|6|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2026-05-09 01:32:15.2045|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Lab04.Filters.ResultFilter. 
+2026-05-09 01:32:15.2045|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Lab04.Filters.ResultFilter. 
+2026-05-09 01:32:15.2045|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2026-05-09 01:32:15.2045|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2026-05-09 01:32:15.2045|105|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Lab04.Controllers.AccountController.Register (Lab04) in 761.3279ms 
+2026-05-09 01:32:15.2045|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Lab04.Controllers.AccountController.Register (Lab04)' 
+2026-05-09 01:32:15.2045|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3G9" completed keep alive response. 
+2026-05-09 01:32:15.2045|10407|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'UniDbContext' disposed. 
+2026-05-09 01:32:15.2204|20007|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposing connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:15.2204|20008|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposed connection to database '' on server '' (0ms). 
+2026-05-09 01:32:15.2204|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5279/api/Account/register - 200 - application/json;+charset=utf-8 844.1745ms 
+2026-05-09 01:32:49.5802|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5279/api/Account/login - application/json 55 
+2026-05-09 01:32:49.5802|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2026-05-09 01:32:49.5802|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/Account/login' 
+2026-05-09 01:32:49.5802|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Lab04.Controllers.AccountController.Login (Lab04)' with route pattern 'api/Account/login' is valid for the request path '/api/Account/login' 
+2026-05-09 01:32:49.5802|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Lab04.Controllers.AccountController.Login (Lab04)' 
+2026-05-09 01:32:49.5802|8|TRACE|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|The endpoint does not specify the IRequestSizeLimitMetadata. 
+2026-05-09 01:32:49.5802|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: POST /api/Account/login 
+2026-05-09 01:32:49.5802|9|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2026-05-09 01:32:49.5802|10|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware|No CORS policy found for the specified request. 
+2026-05-09 01:32:49.5802|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Lab04.Controllers.AccountController.Login (Lab04)' 
+2026-05-09 01:32:49.5977|102|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Lab04.Models.DTOs.LoginDTO) on controller Lab04.Controllers.AccountController (Lab04). 
+2026-05-09 01:32:49.5977|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2026-05-09 01:32:49.5977|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2026-05-09 01:32:49.5977|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2026-05-09 01:32:49.5977|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): Lab04.Filters.ExceptionFilter 
+2026-05-09 01:32:49.5977|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000), Lab04.Filters.ResultFilter 
+2026-05-09 01:32:49.5977|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Lab04.Controllers.AccountController (Lab04) 
+2026-05-09 01:32:49.5977|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Lab04.Controllers.AccountController (Lab04) 
+2026-05-09 01:32:49.5977|22|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'request' of type 'Lab04.Models.DTOs.LoginDTO' ... 
+2026-05-09 01:32:49.5977|44|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'request' of type 'Lab04.Models.DTOs.LoginDTO' using the name '' in request data ... 
+2026-05-09 01:32:49.5977|1|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'. 
+2026-05-09 01:32:49.6042|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HNLDA5T3K3G9", Request id "0HNLDA5T3K3G9:00000005": started reading request body. 
+2026-05-09 01:32:49.6042|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HNLDA5T3K3G9", Request id "0HNLDA5T3K3G9:00000005": done reading request body. 
+2026-05-09 01:32:49.6042|2|DEBUG|Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter|JSON input formatter succeeded, deserializing to type 'Lab04.Models.DTOs.LoginDTO' 
+2026-05-09 01:32:49.6042|45|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'request' of type 'Lab04.Models.DTOs.LoginDTO'. 
+2026-05-09 01:32:49.6042|23|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'request' of type 'Lab04.Models.DTOs.LoginDTO'. 
+2026-05-09 01:32:49.6042|26|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'request' of type 'Lab04.Models.DTOs.LoginDTO' ... 
+2026-05-09 01:32:49.6042|27|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'request' of type 'Lab04.Models.DTOs.LoginDTO'. 
+2026-05-09 01:32:49.6042|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2026-05-09 01:32:49.6042|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2026-05-09 01:32:49.6042|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2026-05-09 01:32:49.6042|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2026-05-09 01:32:49.6042|101|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Lab04.Controllers.AccountController.Login (Lab04) - Validation state: Valid 
+2026-05-09 01:32:49.6042|102|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Lab04.Controllers.AccountController.Login (Lab04) with arguments (Lab04.Models.DTOs.LoginDTO) 
+2026-05-09 01:32:49.6243|10403|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 10.0.7 initialized 'UniDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:10.0.7' with options: EngineType=SqlServer  
+2026-05-09 01:32:49.6243|20005|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Creating DbConnection. 
+2026-05-09 01:32:49.6243|20006|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Created DbConnection. (0ms). 
+2026-05-09 01:32:49.6243|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:49.6243|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:49.6243|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2026-05-09 01:32:49.6243|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2026-05-09 01:32:49.6243|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2026-05-09 01:32:49.6243|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @normalizedUserName 
+2026-05-09 01:32:49.6243|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @normalizedUserName 
+2026-05-09 01:32:49.6243|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'UniDbContext' started tracking 'ApplicationUser' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+2026-05-09 01:32:49.6243|20301|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:49.6243|20300|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'UniDb' on server 'JUSTSASA\SQLEXPRESS' is being disposed after spending 0ms reading results. 
+2026-05-09 01:32:49.6243|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:49.6243|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS' (0ms). 
+2026-05-09 01:32:49.7608|10111|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<IdentityUserRole<string>>()
+    .Join(
+        inner: DbSet<IdentityRole>(), 
+        outerKeySelector: userRole => userRole.RoleId, 
+        innerKeySelector: role => role.Id, 
+        resultSelector: (userRole, role) => new { 
+            userRole = userRole, 
+            role = role
+         })
+    .Where(<>h__TransparentIdentifier0 => <>h__TransparentIdentifier0.userRole.UserId.Equals(@userId))
+    .Select(<>h__TransparentIdentifier0 => <>h__TransparentIdentifier0.role.Name)' 
+2026-05-09 01:32:49.8701|10107|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => SingleQueryingEnumerable.Create<string>(
+    relationalQueryContext: (RelationalQueryContext)queryContext, 
+    relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> 0
+        SELECT a0.Name
+        FROM AspNetUserRoles AS a
+        INNER JOIN AspNetRoles AS a0 ON a.RoleId == a0.Id
+        WHERE a.UserId == @userId) | Resolver: c => new RelationalCommandCache(
+        c.Dependencies.MemoryCache, 
+        c.RelationalDependencies.QuerySqlGeneratorFactory, 
+        c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+        Projection Mapping:
+            EmptyProjectionMember -> 0
+        SELECT a0.Name
+        FROM AspNetUserRoles AS a
+        INNER JOIN AspNetRoles AS a0 ON a.RoleId == a0.Id
+        WHERE a.UserId == @userId, 
+        False, 
+        MultipleParameters
+    )].GetRelationalCommandTemplate(parameters), 
+    readerColumns: null, 
+    shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+    {
+        string value1;
+        value1 = dataReader.IsDBNull(0) ? default(string) : dataReader.GetString(0);
+        return value1;
+    }, 
+    contextType: Lab04.Models.UniDbContext, 
+    standAloneStateManager: False, 
+    detailedErrorsEnabled: False, 
+    threadSafetyChecksEnabled: True)' 
+2026-05-09 01:32:49.8701|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:49.8701|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:49.8701|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2026-05-09 01:32:49.8701|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2026-05-09 01:32:49.8701|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2026-05-09 01:32:49.8701|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[@userId='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @userId 
+2026-05-09 01:32:49.8941|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (19ms) [Parameters=[@userId='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @userId 
+2026-05-09 01:32:49.8941|20301|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:49.8941|20300|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'UniDb' on server 'JUSTSASA\SQLEXPRESS' is being disposed after spending 2ms reading results. 
+2026-05-09 01:32:49.8941|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:49.8941|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS' (0ms). 
+2026-05-09 01:32:50.1440|103|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Lab04.Controllers.AccountController.Login (Lab04), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 537.6987ms. 
+2026-05-09 01:32:50.1440|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2026-05-09 01:32:50.1440|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2026-05-09 01:32:50.1440|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2026-05-09 01:32:50.1440|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2026-05-09 01:32:50.1440|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2026-05-09 01:32:50.1440|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2026-05-09 01:32:50.1440|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Lab04.Filters.ResultFilter. 
+2026-05-09 01:32:50.1440|0|INFO|Lab04.Filters.ResultFilter|OnResultExecuting: Header: server-time: 5/9/2026 1:32:50 AM 
+2026-05-09 01:32:50.1440|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Lab04.Filters.ResultFilter. 
+2026-05-09 01:32:50.1440|5|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2026-05-09 01:32:50.1440|11|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter 
+2026-05-09 01:32:50.1440|4|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2026-05-09 01:32:50.1440|8|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2026-05-09 01:32:50.1440|10|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2026-05-09 01:32:50.1440|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response. 
+2026-05-09 01:32:50.1440|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type '<>f__AnonymousType0`4[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IList`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2026-05-09 01:32:50.1497|6|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2026-05-09 01:32:50.1497|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Lab04.Filters.ResultFilter. 
+2026-05-09 01:32:50.1497|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Lab04.Filters.ResultFilter. 
+2026-05-09 01:32:50.1497|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2026-05-09 01:32:50.1497|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2026-05-09 01:32:50.1497|105|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Lab04.Controllers.AccountController.Login (Lab04) in 551.9508ms 
+2026-05-09 01:32:50.1497|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Lab04.Controllers.AccountController.Login (Lab04)' 
+2026-05-09 01:32:50.1497|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3G9" completed keep alive response. 
+2026-05-09 01:32:50.1497|10407|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'UniDbContext' disposed. 
+2026-05-09 01:32:50.1497|20007|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposing connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:32:50.1497|20008|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposed connection to database '' on server '' (0ms). 
+2026-05-09 01:32:50.1497|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5279/api/Account/login - 200 - application/json;+charset=utf-8 570.3545ms 
+2026-05-09 01:33:12.6319|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3G6" disconnecting. 
+2026-05-09 01:33:12.6319|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3G7" disconnecting. 
+2026-05-09 01:33:12.6319|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3G6" stopped. 
+2026-05-09 01:33:12.6319|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3G7" stopped. 
+2026-05-09 01:33:12.6319|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3G8" disconnecting. 
+2026-05-09 01:33:12.6319|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3G8" stopped. 
+2026-05-09 01:33:12.6319|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3GA" disconnecting. 
+2026-05-09 01:33:12.6319|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3GA" stopped. 
+2026-05-09 01:33:12.6319|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3GB" disconnecting. 
+2026-05-09 01:33:12.6319|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3GB" stopped. 
+2026-05-09 01:33:12.6319|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLDA5T3K3G6" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2026-05-09 01:33:12.6319|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLDA5T3K3G8" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2026-05-09 01:33:12.6319|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLDA5T3K3G7" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2026-05-09 01:33:12.6350|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLDA5T3K3GA" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2026-05-09 01:33:12.6350|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLDA5T3K3GB" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2026-05-09 01:34:05.0396|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3GD" disconnecting. 
+2026-05-09 01:34:05.0396|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3GD" stopped. 
+2026-05-09 01:34:05.0401|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLDA5T3K3GD" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2026-05-09 01:34:57.4776|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Config reload token fired. Checking for changes... 
+2026-05-09 01:34:57.4781|7|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Middleware configuration started with options: {AllowedHosts = *, AllowEmptyHosts = True, IncludeFailureMessage = True} 
+2026-05-09 01:34:57.4781|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2026-05-09 01:34:57.7471|7|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Middleware configuration started with options: {AllowedHosts = *, AllowEmptyHosts = True, IncludeFailureMessage = True} 
+2026-05-09 01:34:57.7471|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2026-05-09 01:34:57.7471|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Config reload token fired. Checking for changes... 
+2026-05-09 01:35:01.3946|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3G9" disconnecting. 
+2026-05-09 01:35:01.3946|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HNLDA5T3K3G9" stopped. 
+2026-05-09 01:35:01.3946|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HNLDA5T3K3G9" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2026-05-09 01:38:20.3969|0|DEBUG|Lab04.Program|init main 
+2026-05-09 01:38:20.5984|10401|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
+2026-05-09 01:38:21.2096|10601|DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'UserId'} was not created on entity type 'IdentityUserRole<string>' as the properties are already covered by the index {'UserId', 'RoleId'}. 
+2026-05-09 01:38:21.2096|10601|DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'UserId'} was not created on entity type 'IdentityUserToken<string>' as the properties are already covered by the index {'UserId', 'LoginProvider', 'Name'}. 
+2026-05-09 01:38:21.3487|10600|DEBUG|Microsoft.EntityFrameworkCore.Model.Validation|The property 'Student.DepartmentId' was created in shadow state because there are no eligible CLR members with a matching name. 
+2026-05-09 01:38:21.4574|10403|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 10.0.7 initialized 'UniDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:10.0.7' with options: EngineType=SqlServer  
+2026-05-09 01:38:25.1477|10407|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'UniDbContext' disposed. 
+2026-05-09 01:38:43.3101|0|DEBUG|Lab04.Program|init main 
+2026-05-09 01:38:43.5248|10401|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
+2026-05-09 01:38:44.1905|10601|DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'UserId'} was not created on entity type 'IdentityUserRole<string>' as the properties are already covered by the index {'UserId', 'RoleId'}. 
+2026-05-09 01:38:44.1905|10601|DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'UserId'} was not created on entity type 'IdentityUserToken<string>' as the properties are already covered by the index {'UserId', 'LoginProvider', 'Name'}. 
+2026-05-09 01:38:44.3366|10600|DEBUG|Microsoft.EntityFrameworkCore.Model.Validation|The property 'Student.DepartmentId' was created in shadow state because there are no eligible CLR members with a matching name. 
+2026-05-09 01:38:44.4473|10403|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 10.0.7 initialized 'UniDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:10.0.7' with options: EngineType=SqlServer  
+2026-05-09 01:38:44.7225|20005|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Creating DbConnection. 
+2026-05-09 01:38:44.7545|20006|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Created DbConnection. (25ms). 
+2026-05-09 01:38:44.7545|20400|DEBUG|Microsoft.EntityFrameworkCore.Migrations|Migrating using database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:38:44.7545|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:38:45.0392|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:38:45.0459|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2026-05-09 01:38:45.0459|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (5ms). 
+2026-05-09 01:38:45.0459|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteNonQuery' (11ms). 
+2026-05-09 01:38:45.0621|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2026-05-09 01:38:45.0948|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (34ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2026-05-09 01:38:45.0948|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:38:45.1080|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS' (6ms). 
+2026-05-09 01:38:45.1080|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:38:45.1080|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:38:45.1080|20411|INFO|Microsoft.EntityFrameworkCore.Migrations|Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long. 
+2026-05-09 01:38:45.1413|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteScalar'. 
+2026-05-09 01:38:45.1413|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteScalar' (0ms). 
+2026-05-09 01:38:45.1413|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteScalar' (0ms). 
+2026-05-09 01:38:45.1413|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result 
+2026-05-09 01:38:45.1711|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result 
+2026-05-09 01:38:45.3008|20209|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Beginning transaction with isolation level 'Unspecified'. 
+2026-05-09 01:38:45.3008|20200|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Began transaction with isolation level 'ReadCommitted'. 
+2026-05-09 01:38:45.3008|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2026-05-09 01:38:45.3008|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-09 01:38:45.3008|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteNonQuery' (1ms). 
+2026-05-09 01:38:45.3008|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END; 
+2026-05-09 01:38:45.3168|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END; 
+2026-05-09 01:38:45.3168|20210|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committing transaction. 
+2026-05-09 01:38:45.3168|20202|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committed transaction. 
+2026-05-09 01:38:45.3168|20204|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Disposing transaction. 
+2026-05-09 01:38:45.3307|20209|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Beginning transaction with isolation level 'Unspecified'. 
+2026-05-09 01:38:45.3307|20200|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Began transaction with isolation level 'ReadCommitted'. 
+2026-05-09 01:38:45.3307|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2026-05-09 01:38:45.3307|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-09 01:38:45.3307|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-09 01:38:45.3307|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2026-05-09 01:38:45.3307|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2026-05-09 01:38:45.3307|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteScalar'. 
+2026-05-09 01:38:45.3307|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteScalar' (0ms). 
+2026-05-09 01:38:45.3307|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteScalar' (0ms). 
+2026-05-09 01:38:45.3307|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); 
+2026-05-09 01:38:45.3307|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); 
+2026-05-09 01:38:45.3307|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2026-05-09 01:38:45.3307|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2026-05-09 01:38:45.3307|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2026-05-09 01:38:45.3307|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId]; 
+2026-05-09 01:38:45.3544|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId]; 
+2026-05-09 01:38:45.3544|20301|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:38:45.3611|20300|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'UniDb' on server 'JUSTSASA\SQLEXPRESS' is being disposed after spending 4ms reading results. 
+2026-05-09 01:38:45.3611|20402|INFO|Microsoft.EntityFrameworkCore.Migrations|Applying migration '20260508223824_tokens'. 
+2026-05-09 01:38:45.4132|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2026-05-09 01:38:45.4132|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-09 01:38:45.4132|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-09 01:38:45.4132|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [RefreshTokens] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [TokenHash] nvarchar(64) NOT NULL,
+    [ExpiresAt] datetime2 NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [RevokedAt] datetime2 NULL,
+    [ReplacedByHash] nvarchar(64) NULL,
+    CONSTRAINT [PK_RefreshTokens] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RefreshTokens_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+); 
+2026-05-09 01:38:45.4320|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [RefreshTokens] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [TokenHash] nvarchar(64) NOT NULL,
+    [ExpiresAt] datetime2 NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [RevokedAt] datetime2 NULL,
+    [ReplacedByHash] nvarchar(64) NULL,
+    CONSTRAINT [PK_RefreshTokens] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RefreshTokens_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+); 
+2026-05-09 01:38:45.4320|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2026-05-09 01:38:45.4320|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-09 01:38:45.4320|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-09 01:38:45.4320|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_RefreshTokens_TokenHash] ON [RefreshTokens] ([TokenHash]); 
+2026-05-09 01:38:45.4320|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_RefreshTokens_TokenHash] ON [RefreshTokens] ([TokenHash]); 
+2026-05-09 01:38:45.4320|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2026-05-09 01:38:45.4320|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-09 01:38:45.4320|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-09 01:38:45.4320|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_RefreshTokens_UserId] ON [RefreshTokens] ([UserId]); 
+2026-05-09 01:38:45.4320|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_RefreshTokens_UserId] ON [RefreshTokens] ([UserId]); 
+2026-05-09 01:38:45.4320|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2026-05-09 01:38:45.4320|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-09 01:38:45.4320|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteNonQuery' (0ms). 
+2026-05-09 01:38:45.4320|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20260508223824_tokens', N'10.0.7'); 
+2026-05-09 01:38:45.4320|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20260508223824_tokens', N'10.0.7'); 
+2026-05-09 01:38:45.4320|20210|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committing transaction. 
+2026-05-09 01:38:45.4320|20202|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Committed transaction. 
+2026-05-09 01:38:45.4320|20204|DEBUG|Microsoft.EntityFrameworkCore.Database.Transaction|Disposing transaction. 
+2026-05-09 01:38:45.4320|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteScalar'. 
+2026-05-09 01:38:45.4320|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteScalar' (0ms). 
+2026-05-09 01:38:45.4320|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteScalar' (0ms). 
+2026-05-09 01:38:45.4320|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result 
+2026-05-09 01:38:45.4320|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result 
+2026-05-09 01:38:45.4320|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:38:45.4320|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS' (0ms). 
+2026-05-09 01:38:45.4522|10407|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'UniDbContext' disposed. 
+2026-05-09 01:38:45.4522|20007|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposing connection to database 'UniDb' on server 'JUSTSASA\SQLEXPRESS'. 
+2026-05-09 01:38:45.4522|20008|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposed connection to database '' on server '' (1ms). 

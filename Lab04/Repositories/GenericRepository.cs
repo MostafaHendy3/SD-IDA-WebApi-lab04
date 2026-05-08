@@ -56,7 +56,6 @@ namespace Lab04.Repositories
         public void Add(T entity)
         {
             _dbSet.Add(entity);
-            _context.SaveChanges();
         }
 
         public void Edit(T entity)
@@ -64,19 +63,16 @@ namespace Lab04.Repositories
             // Edit behaves like Update but uses Attach+Modified
             _dbSet.Attach(entity);
             _context.Entry(entity).State = EntityState.Modified;
-            _context.SaveChanges();
         }
 
         public void Update(T entity)
         {
             _dbSet.Update(entity);
-            _context.SaveChanges();
         }
 
         public void Remove(T entity)
         {
             _dbSet.Remove(entity);
-            _context.SaveChanges();
         }
     }
 }

@@ -1,0 +1,34 @@
+2026-05-08 15:35:45.0451|0|DEBUG|Lab04.Program|init main |url: |action: 
+2026-05-08 15:36:02.2563|0|DEBUG|Lab04.Program|init main |url: |action: 
+2026-05-08 15:37:09.6770|0|DEBUG|Lab04.Program|init main |url: |action: 
+2026-05-08 15:37:10.2914|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5279 |url: |action: 
+2026-05-08 15:37:10.5442|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2026-05-08 15:37:10.5442|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2026-05-08 15:37:10.5442|0|INFO|Microsoft.Hosting.Lifetime|Content root path: E:\ITI\WebApi\lec01\Lab04 |url: |action: 
+2026-05-08 15:37:12.2921|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-08 15:37:12.4039|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-08 15:37:12.4039|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-08 15:37:12.4039|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-08 15:37:12.4039|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-08 15:37:12.4039|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-08 15:37:12.6438|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-08 15:37:48.3768|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-08 15:38:16.3254|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /Register |url: http://localhost/Register|action: 
+2026-05-08 15:39:26.5848|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: POST /Register |url: http://localhost/Register|action: 
+2026-05-08 15:39:32.0928|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.html |url: http://localhost/swagger/index.html|action: 
+2026-05-08 15:39:32.1201|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui.css |url: http://localhost/swagger/swagger-ui.css|action: 
+2026-05-08 15:39:32.1209|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.css |url: http://localhost/swagger/index.css|action: 
+2026-05-08 15:39:32.1209|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-bundle.js |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2026-05-08 15:39:32.1209|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/swagger-ui-standalone-preset.js |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2026-05-08 15:39:32.1209|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/index.js |url: http://localhost/swagger/index.js|action: 
+2026-05-08 15:39:32.3230|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: GET /swagger/v1/swagger.json |url: http://localhost/swagger/v1/swagger.json|action: 
+2026-05-08 15:39:36.5507|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: POST /Register |url: http://localhost/Register|action: 
+2026-05-08 15:39:49.1639|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: POST /register |url: http://localhost/register|action: 
+2026-05-08 15:40:05.5770|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: POST /api/register |url: http://localhost/api/register|action: 
+2026-05-08 15:40:17.7264|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: POST /api/register |url: http://localhost/api/register|action: 
+2026-05-08 15:40:30.6254|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: POST /api/Account/register |url: http://localhost/api/Account/register|action: Register
+2026-05-08 15:40:30.9860|0|INFO|Lab04.Filters.ResultFilter|OnResultExecuting: Header: server-time: 5/8/2026 3:40:30 PM |url: http://localhost/api/Account/register|action: Register
+2026-05-08 15:41:02.3422|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: POST /api/Account/register |url: http://localhost/api/Account/register|action: Register
+2026-05-08 15:41:02.3595|0|INFO|Lab04.Filters.ResultFilter|OnResultExecuting: Header: server-time: 5/8/2026 3:41:02 PM |url: http://localhost/api/Account/register|action: Register
+2026-05-08 15:41:21.5281|0|INFO|Lab04.Middleware.LoggingMiddleware|Handling request: POST /api/Account/register |url: http://localhost/api/Account/register|action: Register
+2026-05-08 15:41:24.4388|0|INFO|Lab04.Filters.ResultFilter|OnResultExecuting: Header: server-time: 5/8/2026 3:41:24 PM |url: http://localhost/api/Account/register|action: Register
